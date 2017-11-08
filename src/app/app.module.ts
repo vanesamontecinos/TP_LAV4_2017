@@ -1,22 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
+import { HttpModule } from '@angular/http';
 import { AdivinaElNumeroComponent } from './componentes/adivina-el-numero/adivina-el-numero.component';
 import { ListadoDeResultadosComponent } from './componentes/listado-de-resultados/listado-de-resultados.component';
+import { ListadojugadorComponent } from './componentes/listadojugador/listadojugador.component';
 import { LoginComponent } from './componentes/login/login.component';
 //  import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { HttpModule } from '@angular/http';
-
+import { ArchivosjugadoresService } from './servicios/archivosJugadores/archivosjugadores.service';
+import { JugadoresService } from './servicios/jugadores/jugadores.service';
 // import { AccordionModule } from 'ngx-bootstrap';
 // agrego las clases para utilizar ruteo
 import { RouterModule, Routes } from '@angular/router';
 
-import { MiHttpService } from './servicios/mi-http/mi-http.service'; 
-import { PaisesService } from './servicios/paises.service'; 
-
-import { JugadoresService } from './servicios/jugadores.service'; 
-import{ ArchivosJugadoresService} from './servicios/archivos-jugadores.service'; 
 import { ErrorComponent } from './componentes/error/error.component';
 import { PrincipalComponent } from './componentes/principal/principal.component';
 import { AgilidadAritmeticaComponent } from './componentes/agilidad-aritmetica/agilidad-aritmetica.component';
@@ -38,7 +35,6 @@ const MiRuteo = [{path: 'error' , component: ErrorComponent},
 
 {path: '**' , component: ErrorComponent} ];
 */
-import { JugadoresListadoComponent } from './componentes/jugadores-listado/jugadores-listado.component';
 
 import { JuegoServiceService } from './servicios/juego-service.service';
 import { ListadosComponent } from './componentes/listados/listados.component';
@@ -48,11 +44,7 @@ import { MenuCardComponent } from './componentes/menu-card/menu-card.component';
 import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 import { QuienSoyComponent } from './componentes/quien-soy/quien-soy.component';
 import { AnagramaComponent } from './componentes/anagrama/anagrama.component';
-import { ListadoDePaisesComponent } from './componentes/listado-de-paises/listado-de-paises.component';
-import { MapaDeGoogleComponent } from './componentes/mapa-de-google/mapa-de-google.component'
-import { AgmCoreModule } from '@agm/core';
-import { InputJugadoresComponent } from './componentes/input-jugadores/input-jugadores.component';
-import { SexoPipe } from './pipes/sexo.pipe';
+import { PiedrapapeltijeraComponent } from './componentes/piedrapapeltijera/piedrapapeltijera.component'
 
 @NgModule({
   declarations: [
@@ -69,30 +61,24 @@ import { SexoPipe } from './pipes/sexo.pipe';
     ListadoComponent,
     ListadosComponent,
     JuegosComponent,
+    ListadojugadorComponent,
     RegistroComponent,
     MenuCardComponent,
     CabeceraComponent,
     QuienSoyComponent,
     AnagramaComponent,
-    ListadoDePaisesComponent,
-    MapaDeGoogleComponent,
-    JugadoresListadoComponent,
-    InputJugadoresComponent,
-    SexoPipe
+    PiedrapapeltijeraComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RuteandoModule,
-    HttpModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'
-    })
+    RuteandoModule,HttpModule
+
     // NgbModule.forRoot(MiRuteo),
     // importo el ruteo
     // RouterModule.forRoot(MiRuteo)
   ],
-  providers: [ JuegoServiceService, MiHttpService,PaisesService,ArchivosJugadoresService,JugadoresService],
+  providers: [ JuegoServiceService,ArchivosjugadoresService,JugadoresService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

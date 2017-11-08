@@ -16,7 +16,7 @@ export class MiHttpService {
 
 
     return this.http
-    .get(url)
+    .get("../../assets/archivos/" + url)
     .toPromise()
     .then(this.extraerDatos)
     .catch(this.handleError);

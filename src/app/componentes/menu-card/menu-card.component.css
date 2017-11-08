@@ -7,8 +7,9 @@
     margin: 10px;
     padding-bottom: 10px;
     float: left;
-  background-color: #DEF3A6;
+  background-color: #A5240E;
     text-align: center;
+    color: white;
 }
 
 /* Add rounded corners to the top left and the top right corner of the image */
@@ -19,6 +20,8 @@ img {
 }/* Add some padding inside the card container */
 .container {
     padding: 2px 16px;
+    background-color:#090A09;
+    background-size:100% 100%;
 }
 
 

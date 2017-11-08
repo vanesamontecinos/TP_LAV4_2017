@@ -1,0 +1,50 @@
+
+<body onload="comenzar()">
+  <div class="CajaUno">
+    
+
+    <!--input type="text" readonly id="ganadas">
+    <input type="text" readonly id="perdidas">
+    <input type="text" readonly id="empatadas">
+    <form id="FormIngreso">
+    
+        <img src="../imagenes/interrogacion.jpg" >
+      
+      
+    </form-->
+    
+  </div>
+  <div class="container" *ngIf="jugar">
+
+    <h1 class="letra" >Seleccione una opcion</h1>
+    
+
+    
+    
+    <!--button  (click)="piedra()" src="../assets/imagenes/piedra.jpg"></button>
+    <img class="PiedraPapelTijera animated zoomInUp" src="../assets/imagenes/piedra.jpg" onclick="piedra()">
+    <img class="PiedraPapelTijera animated zoomInUp" src="../assets/imagenes/papel.jpg" onclick="papel()">
+    <img class="PiedraPapelTijera animated zoomInLeft"  src="../assets/imagenes/tijera.jpg" onclick="tijera()">
+    <button class="button"  (click)="piedra()">Jugar</button-->
+    <button  block width="80px" 
+    (click)=piedra()>
+    <img src="../assets/imagenes/piedra.jpg" height="300" width="200">
+      </button>
+      <button  block width="80px" 
+      (click)=papel()>
+      <img src="../assets/imagenes/papel.jpg" height="300" width="200">
+        </button>
+        <button  block width="80px" 
+        (click)=tijera()>
+        <img src="../assets/imagenes/tijera.jpg" height="300" width="200">
+          </button>
+    
+
+    
+
+
+  </div>
+
+
+
+</body>

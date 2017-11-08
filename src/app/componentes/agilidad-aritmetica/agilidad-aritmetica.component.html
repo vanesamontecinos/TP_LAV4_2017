@@ -4,11 +4,16 @@
 
 
 <form name="juego">
+   
 <ul>
-   <li>
+   <!--li>
    Primer número: <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%" readonly/>
   
   </li>
+  <li>
+      Primer número: <input [(ngModel)]="numeroUno" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%" readonly/>
+     {{this.numeroUno}}
+     </li>
   <li>
    Operador: <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%" readonly/>
     
@@ -16,9 +21,21 @@
   <li>
    Segundo número: <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%" readonly/>
     
-  </li>
+  </li-->
+
+  <div class=cuadro>
+    <h1>
+    {{this.numeroUno}}</h1>
+  </div>
+  <div class=cuadro>
+    <h1>  {{this.eloperador}}</h1>
+    </div>
+    <div class=cuadro>
+      <h1>   {{this.numeroDos}}</h1>
+      </div>
+<div>
   <li>
-    Respuesta: <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%"/>
+    Respuesta: <input [(ngModel)]="numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%"/>
      
    </li>
   <li>
@@ -33,6 +50,7 @@
     <h3 [hidden]="!nuevoJuego.gano">usted adivino el número</h3>
     <h3 [hidden]="nuevoJuego.gano">usted aún no gano </h3>
   </li>
+</div>
 </ul>
 
 </form>

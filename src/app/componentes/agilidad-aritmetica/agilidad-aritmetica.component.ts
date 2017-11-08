@@ -14,7 +14,13 @@ export class AgilidadAritmeticaComponent implements OnInit {
   nuevoJuego : JuegoAgilidad;
   ocultarVerificar: boolean;
   Tiempo: number;
+  numeroUno:number;
+  numeroDos:any;
+  operador:number;
+  eloperador:any;
   repetidor:any;
+  resultado:number;
+  numeroIngresado:number;
   private subscription: Subscription;
   ngOnInit() {
   }
@@ -22,7 +28,8 @@ export class AgilidadAritmeticaComponent implements OnInit {
      this.ocultarVerificar=true;
      this.Tiempo=5; 
     this.nuevoJuego = new JuegoAgilidad();
-    console.info("Inicio agilidad");  
+    console.info("Inicio agilidad"); 
+    this.completarnumeros(); 
   }
   NuevoJuego() {
     this.ocultarVerificar=false;
@@ -38,14 +45,41 @@ export class AgilidadAritmeticaComponent implements OnInit {
       }
       }, 900);
 
+this.completarnumeros();
   }
+completarnumeros(){
+  this.numeroUno =Math.floor( Math.random()*10)+1;
+  this.numeroDos =Math.floor( Math.random()*10)+1;
+  this.operador =Math.floor( Math.random()*3)+1;
+  switch(this.operador)
+  {
+    case 1:
+      this.eloperador="x";
+      this.resultado=this.numeroUno*this.numeroDos;
+      break;
+    case 2:
+    this.eloperador="+";
+    this.resultado=this.numeroUno+this.numeroDos;
+      break;
+    case 3:
+    this.eloperador="-";
+    this.resultado=this.numeroUno-this.numeroDos;
+      break;
+  }
+
+}
+
   verificar()
   {
     this.ocultarVerificar=false;
     clearInterval(this.repetidor);
-   
-
-   
+    if (this.numeroIngresado==this.resultado)
+    {alert("Respuesta Correcta!!")}
+    else { alert("Respuesta Incorrecta! El resultado es: "+this.resultado)}
+    this.numeroIngresado=null;
+    this.ocultarVerificar=true;
+    clearInterval(this.repetidor);
+    this.Tiempo=5; 
   }  
 
 }

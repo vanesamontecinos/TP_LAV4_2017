@@ -1,7 +1,8 @@
 .panel
 {
     height: 200px;
-    background-image: url("/TP_LAV4_2017/assets/imagenes/cabecera.png");
+    
+    background-image: url("/assets/imagenes/fondo.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

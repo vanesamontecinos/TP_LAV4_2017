@@ -1,5 +1,10 @@
 import { Juego } from '../clases/juego'
-
+/**
+ * Juego adivina el Numero
+ * la amquina genera un numero secreto ramdom entre 0 y 100.
+ * El jugador debe adivinar el numero.
+ * la maquina le informa si el numero ingresado es mayor o menor al numero secreto.
+ */
 export class JuegoAdivina extends  Juego {
     numeroSecreto: number = 0;
     numeroIngresado = 0;

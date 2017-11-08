@@ -1,0 +1,68 @@
+<ul class="nav nav-pills nav-justified">
+  <li class="active"><a routerLink="/Principal">Sala de Juegos</a></li>
+  
+  <li><a (click)="Show()">Traer Todos</a></li>
+  <li><a (click)="filtTrue()">Gano</a></li>
+  <li><a (click)="filtFalse()">Perdio</a></li>
+</ul>
+
+
+
+<div class="container">
+  <!--div style="text-align:center">
+      <button class="btn" (click)="Show()"> Traer todos</button>
+      <button class="btn" (click)="filtTrue()">Gano</button>
+      <button class="btn" (click)=filtFalse()>Perdio</button>
+  </div-->
+  <table class="table" [hidden]="mostrar">
+      <thead>
+        <th>Cuit</th>
+        <th>Usuario</th>
+        <th>email</th>
+        <th>fecha</th>
+        <th>sexo</th>
+        <th>puntaje</th>
+        <th>gano?</th>
+      </thead>
+      <tbody *ngFor="let us of users">
+        <td>{{us.cuit}}</td>
+        <td>{{us.usuario}}</td>
+        <td>{{us.email}}</td>
+        <td>{{us.fecha}}</td>      
+        <td>{{us.sexo}}</td>
+        <td>{{us.puntaje}}</td>
+        <td>{{us.gano}}</td>
+        
+      </tbody>
+    </table>
+  
+    <table class="table" [hidden]="mostrarFilt">
+      <thead>
+        <th>Cuit</th>
+        <th>Usuario</th>
+        <th>email</th>
+        <th>fecha</th>
+        <th>sexo</th>
+        <th>puntaje</th>
+        <th>gano</th>
+        
+      </thead>
+      <tbody *ngFor="let us of filtrado">
+        <td>{{us.cuit}}</td>
+        <td>{{us.usuario}}</td>
+        <td>{{us.email}}</td>
+        <td>{{us.fecha}}</td>      
+        <td>{{us.sexo}}</td>
+        <td>{{us.puntaje}}</td>
+        <td>{{us.gano}}</td>
+        
+      </tbody>
+    </table>
+</div>
+
+
+
+  
+
+
+
