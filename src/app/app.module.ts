@@ -44,7 +44,8 @@ import { MenuCardComponent } from './componentes/menu-card/menu-card.component';
 import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 import { QuienSoyComponent } from './componentes/quien-soy/quien-soy.component';
 import { AnagramaComponent } from './componentes/anagrama/anagrama.component';
-import { PiedrapapeltijeraComponent } from './componentes/piedrapapeltijera/piedrapapeltijera.component'
+import { PiedrapapeltijeraComponent } from './componentes/piedrapapeltijera/piedrapapeltijera.component';
+import { MiJuegoComponent } from './componentes/mi-juego/mi-juego.component'
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { PiedrapapeltijeraComponent } from './componentes/piedrapapeltijera/pied
     CabeceraComponent,
     QuienSoyComponent,
     AnagramaComponent,
-    PiedrapapeltijeraComponent
+    PiedrapapeltijeraComponent,
+    MiJuegoComponent
   ],
   imports: [
     BrowserModule,
