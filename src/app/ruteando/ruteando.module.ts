@@ -21,7 +21,7 @@ import { MenuCardComponent } from '../componentes/menu-card/menu-card.component'
 import { CabeceraComponent } from '../componentes/cabecera/cabecera.component';
 import { QuienSoyComponent } from '../componentes/quien-soy/quien-soy.component'
 import { PiedrapapeltijeraComponent } from '../componentes/piedrapapeltijera/piedrapapeltijera.component'
-
+import { AnagramaComponent } from '../componentes/anagrama/anagrama.component';
 // declaro donde quiero que se dirija
 const MiRuteo = [
 {path: '' , component: PrincipalComponent},
@@ -39,6 +39,7 @@ children:
       {path: 'AdivinaMasListado' , component: AdivinaMasListadoComponent},
       {path: 'AgilidadaMasListado' , component: AgilidadMasListadoComponent},
       {path: 'PPT' , component: PiedrapapeltijeraComponent},
+      {path: 'Anagrama' , component: AnagramaComponent},
       {path: 'Agilidad' , component: AgilidadAritmeticaComponent}]
 },
 {path: '**' , component: ErrorComponent},
