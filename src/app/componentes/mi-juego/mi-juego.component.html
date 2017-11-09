@@ -35,9 +35,12 @@
           <div class="col-sm-8 text-left"> 
             <div class="container">
               <div style="text-align:center">
-                <h1>
-                  {{nuevoJuego.nombre}}!
-                </h1>
+                 <h1 class=centrado> 
+                    <img class="img-thumbnail"   src="../assets/imagenes/adivinanza.gif" alt="Avatar" style="width:110px">
+                    {{nuevoJuego.nombre}}!
+                    <img class="img-thumbnail"   src="../assets/imagenes/adivinanza.gif" alt="Avatar" style="width:110px">
+                  </h1> 
+
                </div>
                <div *ngIf="ocultarComenzar==true" class=padding>
                <img  class="img-thumbnail"  src="{{nuevoJuego.palabraDesordenada}} " alt="Avatar" style="width:400px">
@@ -55,7 +58,7 @@
                  
                 </div>
                 <div>
-                  <h2 [hidden]="!nuevoJuego.gano">usted adivino la palabra</h2>
+                  <h2 [hidden]="!nuevoJuego.gano">Adivinaste!</h2>
                   <h3 [hidden]="nuevoJuego.gano">usted aún no gano </h3>
                 </div>
               </form>

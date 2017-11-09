@@ -36,6 +36,7 @@ height: 70px;
         padding: 2px 16px;
         background-color:#090A09;
         background-size:100% 100%;
+
     }
     
     
@@ -75,4 +76,8 @@ height: 70px;
     
       .fuente{
         font-family: 'Rozha One', serif;
+        
+            text-align: center; 
+            align-content: center;
+          
       }

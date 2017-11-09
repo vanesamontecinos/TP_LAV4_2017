@@ -55,7 +55,7 @@ export class MiJuegoComponent implements OnInit {
     this.ocultarVerificar=true;
 
     if (this.nuevoJuego.verificar()){
-      this.MostarMensaje("Sos un Genio!!!",true);
+      this.MostarMensaje("Felicitaciones!!!",true);
     }else{
       this.mensaje = "Ooops, casi lo lograste!";
       this.MostarMensaje(this.mensaje); 
