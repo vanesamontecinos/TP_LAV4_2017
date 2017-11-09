@@ -52,7 +52,7 @@ export class AnagramaComponent implements OnInit {
     this.ocultarVerificar=true;
 
     if (this.nuevoJuego.verificar()){
-      this.MostarMensaje("Sos un Genio!!!",true);
+      this.MostarMensaje("FELICITACIONES!!!",true);
     }else{
       this.mensaje = "Ooops, casi lo lograste!";
       this.MostarMensaje(this.mensaje); 

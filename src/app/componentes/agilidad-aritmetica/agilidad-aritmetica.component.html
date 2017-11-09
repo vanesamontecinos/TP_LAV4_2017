@@ -3,9 +3,9 @@
 <!-- index.html -->
 
 
-<form name="juego">
+
    
-<ul>
+
    <!--li>
    Primer número: <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%" readonly/>
   
@@ -23,6 +23,16 @@
     
   </li-->
 
+  <h1 class=centrado> 
+      <img class="img-thumbnail"   src="../assets/imagenes/corriendo.gif" alt="Avatar" style="width:110px">
+      Velocidad Aritmetica
+      <img class="img-thumbnail"   src="../assets/imagenes/corriendo.gif" alt="Avatar" style="width:110px">
+    </h1> 
+  <form name="juego">
+      <ul>
+<div [hidden]="ocultarVerificar" >
+   
+    <li>
   <div class=cuadro>
     <h1>
     {{this.numeroUno}}</h1>
@@ -33,22 +43,35 @@
     <div class=cuadro>
       <h1>   {{this.numeroDos}}</h1>
       </div>
+    </li>
+    </div>
+   
 <div>
-  <li>
-    Respuesta: <input [(ngModel)]="numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%"/>
-     
-   </li>
+  
+    <div  [hidden]="ocultarVerificar">
+      
+        <p></p>
+      
+       
+        <li>
+    <input [(ngModel)]="numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:200px"/>
+      </li>
+  </div>
   <li>
     <h2 [hidden]="ocultarVerificar" ><button (click)="verificar()" class="btn btn-success btn-lg">Verificar {{Tiempo}} </button></h2>
+   
   </li>
   <li>
-    <h2 [hidden]="!ocultarVerificar"><button  (click)="NuevoJuego()"  class="btn btn-info btn-lg">Nuevo</button></h2>
+    <h2 [hidden]="!ocultarVerificar"><button  (click)="NuevoJuego()"  class="btn btn-info btn-lg">Nuevo Juego</button></h2>
   </li>
   <li>
-    <h2><p><i class="fa fa-spinner fa-spin"></i>Esperando numero...</p></h2>
-
-    <h3 [hidden]="!nuevoJuego.gano">usted adivino el número</h3>
-    <h3 [hidden]="nuevoJuego.gano">usted aún no gano </h3>
+    <h2 [hidden]="ocultarVerificar"><p><i class="fa fa-spinner fa-spin"></i>Esperando numero...</p></h2>
+    <h3 [hidden]="nuevoJuego.gano">Usted aún no gano </h3>
+    <div [hidden]="!ocultarVerificar">
+    <h3 [hidden]="!nuevoJuego.gano"> FELICITACIONES! Usted adivino el número</h3>
+    
+    <h3 [hidden]="!nuevoJuego.perdio">Respuesta Incorrecta!! el resultado es {{this.resultado}}</h3>
+  </div>
   </li>
 </div>
 </ul>

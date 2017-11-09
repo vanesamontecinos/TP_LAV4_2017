@@ -14,9 +14,18 @@
     
     color: white;
 }
+
+.centrado{
+    text-align: center; 
+}
+
 .CajaUno{
     padding: 2px 16px;
     background-color:#090A09;
     background-size:100% 100%;
 
+}
+.boton{
+    background-color:#023802; 
+    color: white;
 }

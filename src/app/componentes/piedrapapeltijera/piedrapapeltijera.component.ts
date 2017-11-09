@@ -14,9 +14,12 @@ export class PiedrapapeltijeraComponent implements OnInit {
    numeroSecreto:any=1;
    eleccionHumano:any;
    jugar:boolean;
+   yajugo:boolean=false;
+   Mensaje:string="";
   constructor() { 
     this.comenzar;
     this.jugar=true;
+    console.log(this.yajugo);
   }
 
   ngOnInit() {
@@ -25,6 +28,7 @@ export class PiedrapapeltijeraComponent implements OnInit {
    comenzar()
   {
     //Genero el número RANDOM entre 1 y 3
+    this.yajugo=false;
        this.numeroSecreto =Math.floor( Math.random()*3)+1;
       //alert(numeroSecreto);
       switch(this.numeroSecreto)
@@ -47,70 +51,81 @@ export class PiedrapapeltijeraComponent implements OnInit {
   }//FIN DE LA FUNCIÓN
    piedra()
   {
-    console.log("jhjkhkj");
-    alert("la maquina selecciono: "+this.eleccionMaquina);
+    this.yajugo=true;
+    //console.log("jhjkhkj");
+   // alert("la maquina selecciono: "+this.eleccionMaquina);
     this.eleccionHumano="piedra";
     if(this.eleccionHumano==this.eleccionMaquina)
     {
-      alert("empate.");	
+      this.Mensaje="Empate!!"
+      //alert("empate.");	
       this.ContadorDeEmpates++;	
     }
     else if(this.eleccionMaquina=="tijera")
     {
-      alert("vos ganastes.");
+     // alert("vos ganastes.");
+     this.Mensaje="Vos ganaste!!"
       this.ContadorDeGanadas++;
     }
     else
     {
-      alert("ganó la Maquina.");
+     // alert("ganó la Maquina.");
+     this.Mensaje="Gano la maquina!"
       this.ContadorDePerdidas++;
     }
   
- this. mostarResultado();
+ //this. mostarResultado();
   
   }//FIN DE LA FUNCIÓN
    papel()
   {
-    alert("la maquina selecciono: "+this.eleccionMaquina);
+    this.yajugo=true;
+    //console.log("jhjkhkj");
+   // alert("la maquina selecciono: "+this.eleccionMaquina);
     this.eleccionHumano="papel";
     if(this.eleccionHumano==this.eleccionMaquina)
     {
-      alert("empate.");
-      this.ContadorDeEmpates++;		
-  
+      this.Mensaje="Empate!!"
+      //alert("empate.");	
+      this.ContadorDeEmpates++;	
     }
-    else if(this.eleccionMaquina=="piedra")
+    else if(this.eleccionMaquina=="tijera")
     {
-      alert("vos ganastes.");
+     // alert("vos ganastes.");
+     this.Mensaje="Vos ganaste!!"
       this.ContadorDeGanadas++;
     }
     else
     {
-      alert("ganó la Maquina.");
+     // alert("ganó la Maquina.");
+     this.Mensaje="Gano la maquina!"
       this.ContadorDePerdidas++;
     }
-  this.mostarResultado();
   }//FIN DE LA FUNCIÓN
    tijera()
   {
-    alert("la maquina selecciono: "+this.eleccionMaquina);
+    this.yajugo=true;
+    //console.log("jhjkhkj");
+   // alert("la maquina selecciono: "+this.eleccionMaquina);
     this.eleccionHumano="tijera";
     if(this.eleccionHumano==this.eleccionMaquina)
     {
-      alert("empate.");
-      this.ContadorDeEmpates++;		
+      this.Mensaje="Empate!!"
+      //alert("empate.");	
+      this.ContadorDeEmpates++;	
     }
-    else if(this.eleccionMaquina=="papel")
+    else if(this.eleccionMaquina=="tijera")
     {
-      alert("vos ganastes.");
+     // alert("vos ganastes.");
+     this.Mensaje="Vos ganaste!!"
       this.ContadorDeGanadas++;
     }
     else
     {
-      alert("ganó la Maquina.");
+     // alert("ganó la Maquina.");
+     this.Mensaje="Gano la maquina!"
       this.ContadorDePerdidas++;
     }
- this.mostarResultado();
   }//FIN DE LA FUNCIÓN
   
    mostarResultado()

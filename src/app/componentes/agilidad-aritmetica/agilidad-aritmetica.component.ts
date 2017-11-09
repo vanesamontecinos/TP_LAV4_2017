@@ -66,6 +66,8 @@ completarnumeros(){
     this.resultado=this.numeroUno-this.numeroDos;
       break;
   }
+  this.nuevoJuego.gano=false;
+  this.nuevoJuego.perdio=false;
 
 }
 
@@ -74,8 +76,10 @@ completarnumeros(){
     this.ocultarVerificar=false;
     clearInterval(this.repetidor);
     if (this.numeroIngresado==this.resultado)
-    {alert("Respuesta Correcta!!")}
-    else { alert("Respuesta Incorrecta! El resultado es: "+this.resultado)}
+    {this.nuevoJuego.gano=true;
+  
+  }
+    else {this.nuevoJuego.perdio=true;  console.log("Respuesta Incorrecta! El resultado es: "+this.resultado)}
     this.numeroIngresado=null;
     this.ocultarVerificar=true;
     clearInterval(this.repetidor);

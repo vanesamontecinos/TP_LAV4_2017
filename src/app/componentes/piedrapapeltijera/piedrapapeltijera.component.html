@@ -1,5 +1,11 @@
 
-<body onload="comenzar()">
+ <h1 class=centrado> 
+    <img class="img-thumbnail"   src="../assets/imagenes/ppt3.gif" alt="Avatar" style="width:110px">
+   ¿ Piedra papel o tijera?
+    <img class="img-thumbnail"   src="../assets/imagenes/ppt3.gif" alt="Avatar" style="width:110px">
+  </h1> 
+<body >
+
   <div class="CajaUno">
     
 
@@ -14,12 +20,9 @@
     </form-->
     
   </div>
-  <div class="container" *ngIf="jugar">
+  <div [hidden]="yajugo" class="container" *ngIf="jugar">
 
     <h1 class="letra" >Seleccione una opcion</h1>
-    
-
-    
     
     <!--button  (click)="piedra()" src="../assets/imagenes/piedra.jpg"></button>
     <img class="PiedraPapelTijera animated zoomInUp" src="../assets/imagenes/piedra.jpg" onclick="piedra()">
@@ -38,13 +41,15 @@
         (click)=tijera()>
         <img src="../assets/imagenes/tijera.jpg" height="300" width="200">
           </button>
-    
-
-    
-
-
+  
   </div>
-
-
+  <div [hidden]="!yajugo" class="container" >
+    <h1>{{this.Mensaje}}</h1>
+    <h2>La maquina selecciono  {{this.eleccionMaquina}}</h2>
+      <button  class=boton block width="80px" 
+      (click)=comenzar()>
+      Nuevo juego
+        </button>
+  </div>
 
 </body>
