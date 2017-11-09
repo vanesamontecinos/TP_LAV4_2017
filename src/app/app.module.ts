@@ -48,6 +48,7 @@ import { PiedrapapeltijeraComponent } from './componentes/piedrapapeltijera/pied
 import { MiJuegoComponent } from './componentes/mi-juego/mi-juego.component'
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { SexoPipe } from './pipes/sexo.pipe';
+import { GanoPipe } from './pipes/gano.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,7 +72,8 @@ import { SexoPipe } from './pipes/sexo.pipe';
     AnagramaComponent,
     PiedrapapeltijeraComponent,
     MiJuegoComponent,
-    SexoPipe
+    SexoPipe,
+    GanoPipe
   ],
   imports: [
     BrowserModule,

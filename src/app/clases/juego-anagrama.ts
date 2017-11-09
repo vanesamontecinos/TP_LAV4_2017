@@ -12,17 +12,18 @@ export class JuegoAnagrama extends Juego {
     }
 
     arrayDePalabras : Array <any >= [
-        { ordenada:"pantalla",desordenada:"platanal" },
-        { ordenada:"mouse",desordenada:"museo" },
+        { ordenada:"sistema",desordenada:"semitas" },
+        { ordenada:"sistema",desordenada:"estimas" },
         { ordenada:"clase",desordenada:"alces" },
         { ordenada:"estilos",desordenada:"islotes" },
         { ordenada:"materias",desordenada:"maestria" },
         { ordenada:"asignatura",desordenada:"angustiara" },
         { ordenada:"sistema",desordenada:"mesitas" },
-        { ordenada:"tecnico",desordenada:"coticen" },
-        { ordenada:"pendrive",desordenada:"prevenid" },
+        { ordenada:"tabla",desordenada:"balta" },
+        { ordenada:"libro",desordenada:"briol" },
         { ordenada:"lapicera",desordenada:"paralice" },
-        { ordenada:"cuaderno",desordenada:"educaron" }
+        { ordenada:"base",desordenada:"sabe" },
+        { ordenada:"datos",desordenada:"todas" }
 
     ];
 

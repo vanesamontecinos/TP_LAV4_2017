@@ -7,10 +7,10 @@ export class SexoPipe implements PipeTransform {
 
   
   transform(value: any, args?: any): any {
-    if(value='M')
+    if(value=='M')
     {
       return "machito";
-    }else if(value='F'){
+    }else if(value=='F'){
       return "señorita";
     }
   }

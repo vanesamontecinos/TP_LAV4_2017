@@ -27,13 +27,14 @@ height: 70px;
       background-color: #A5240E;
         text-align: center;
         color: white;
+        align-content: center;
     }
     
     /* Add rounded corners to the top left and the top right corner of the image */
     img {
         border-radius: 5px 5px 0 0;
         width: 200px;
-        height: 200px;
+        height: 300px;
     }/* Add some padding inside the card container */
     .container {
         padding: 2px 16px;

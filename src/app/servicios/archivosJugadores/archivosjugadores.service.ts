@@ -14,7 +14,9 @@ export class ArchivosjugadoresService {
 
   public httpGetPromise(url: string){
     return this.http
-    .get("./../../assets/archivos/usuarios.json")
+    .get("/TP_LAV4_2017/assets/archivos/usuarios.json")
+    
+   // .get("./../../assets/archivos/usuarios.json")
     //.get("../../../assets/archivos/usuarios.json")
    // .get("../usuarios.json")
     .toPromise()

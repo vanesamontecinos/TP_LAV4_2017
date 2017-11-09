@@ -27,7 +27,7 @@ export class MiJuegoComponent implements OnInit {
    }
 
    generarPalabra() {
-    this.nuevoJuego.asignarPalabra();
+    this.nuevoJuego.asignarImagen();
     this.contador=0;
     //this.ocultarVerificar = false;
     this.nuevoJuego.gano = false;

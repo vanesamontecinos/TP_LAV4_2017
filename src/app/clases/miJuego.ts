@@ -13,27 +13,27 @@ export class MiJuego extends Juego {
     }
 
     arrayDePalabras : Array <any >= [
-        { ordenada:"../assets/imagenes/mijuego/avatar.jpg",desordenada:"avatar" },
-        { ordenada:"../assets/imagenes/mijuego/CisneNegro.jpg",desordenada:"el cisne negro" },
-        { ordenada:"../assets/imagenes/mijuego/clan.jpg",desordenada:"el clan" },
-        { ordenada:"../assets/imagenes/mijuego/Elresplandor.jpg",desordenada:"el resplandor" },
-        { ordenada:"../assets/imagenes/mijuego/it.jpg",desordenada:"it" },
-        { ordenada:"../assets/imagenes/mijuego/killbill.jpg",desordenada:"kill bill" },
-        { ordenada:"../assets/imagenes/mijuego/milagros.jpg",desordenada:"milagros inesperados" },
-        { ordenada:"../assets/imagenes/mijuego/rapido.jpg",desordenada:"rapido y furioso" },
-        { ordenada:"../assets/imagenes/mijuego/relatos.jpg",desordenada:"relatos salvajes" },
-        { ordenada:"../assets/imagenes/mijuego/titanic.jpg",desordenada:"titanic" },
-        { ordenada:"../assets/imagenes/mijuego/27kilos.png",desordenada:"27" },
-        { ordenada:"../assets/imagenes/mijuego/87.jpg",desordenada:"87" },
-        { ordenada:"../assets/imagenes/mijuego/12.jpg",desordenada:"12" },
-        { ordenada:"../assets/imagenes/mijuego/elfuego.png",desordenada:"el fuego" },
-        { ordenada:"../assets/imagenes/mijuego/3.png",desordenada:"3" },
-        { ordenada:"../assets/imagenes/mijuego/autobus.jpg",desordenada:"izquierda" },
+        { ordenada:"/TP_LAV4_2017/assets/imagenes/mijuego/avatar.jpg",desordenada:"avatar" },
+        { ordenada:"/TP_LAV4_2017/assets/imagenes/mijuego/CisneNegro.jpg",desordenada:"el cisne negro" },
+        { ordenada:"/TP_LAV4_2017/assets/imagenes/mijuego/clan.jpg",desordenada:"el clan" },
+        { ordenada:"/TP_LAV4_2017/assets/imagenes/mijuego/Elresplandor.jpg",desordenada:"el resplandor" },
+        { ordenada:"/TP_LAV4_2017/assets/imagenes/mijuego/it.jpg",desordenada:"it" },
+        { ordenada:"/TP_LAV4_2017/assets/imagenes/mijuego/killbill.jpg",desordenada:"kill bill" },
+        { ordenada:"/TP_LAV4_2017/assets/imagenes/mijuego/milagros.jpg",desordenada:"milagros inesperados" },
+        { ordenada:"/TP_LAV4_2017/assets/imagenes/mijuego/rapido.jpg",desordenada:"rapido y furioso" },
+        { ordenada:"/TP_LAV4_2017/assets/imagenes/mijuego/relatos.jpg",desordenada:"relatos salvajes" },
+        { ordenada:"/TP_LAV4_2017/assets/imagenes/mijuego/titanic.jpg",desordenada:"titanic" },
+        { ordenada:"/TP_LAV4_2017/assets/imagenes/mijuego/27kilos.png",desordenada:"27" },
+        { ordenada:"/TP_LAV4_2017/assets/imagenes/mijuego/87.jpg",desordenada:"87" },
+        { ordenada:"/TP_LAV4_2017/assets/imagenes/mijuego/12.jpg",desordenada:"12" },
+        { ordenada:"/TP_LAV4_2017/assets/imagenes/mijuego/elfuego.png",desordenada:"el fuego" },
+        { ordenada:"/TP_LAV4_2017/assets/imagenes/mijuego/3.png",desordenada:"3" },
+        { ordenada:"/TP_LAV4_2017/assets/imagenes/mijuego/autobus.jpg",desordenada:"izquierda" },
        
 
     ];
 
-    public asignarPalabra() {       
+    public asignarImagen() {       
         let indice;
         indice =Math.floor(Math.random() * this.arrayDePalabras.length);
         console.log(this.arrayDePalabras[indice]["ordenada"]);
