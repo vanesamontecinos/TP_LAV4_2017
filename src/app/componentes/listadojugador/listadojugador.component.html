@@ -17,20 +17,22 @@
   </div-->
   <table class="table" [hidden]="mostrar">
       <thead>
-        <th>Cuit</th>
-        <th>Usuario</th>
+        
+        <th>Jugador</th>
         <th>email</th>
         <th>fecha</th>
         <th>sexo</th>
+        <th>juego</th>
         <th>puntaje</th>
         <th>gano?</th>
       </thead>
       <tbody *ngFor="let us of users">
-        <td>{{us.cuit}}</td>
+        
         <td>{{us.usuario}}</td>
         <td>{{us.email}}</td>
         <td>{{us.fecha}}</td>      
         <td>{{us.sexo | sexo}}</td>
+        <td>{{us.juego}}</td>
         <td>{{us.puntaje}}</td>
         <td>{{us.gano}}</td>
         
@@ -39,21 +41,23 @@
   
     <table class="table" [hidden]="mostrarFilt">
       <thead>
-        <th>Cuiiiiit</th>
-        <th>Usuario</th>
+       
+          <th>Jugador</th>
         <th>email</th>
         <th>fecha</th>
         <th>sexo</th>
+        <th>juego</th>
         <th>puntaje</th>
         <th>gano</th>
         
       </thead>
       <tbody *ngFor="let us of filtrado">
-        <td>{{us.cuit}}</td>
+       
         <td>{{us.usuario}}</td>
         <td>{{us.email}}</td>
         <td>{{us.fecha}}</td>      
         <td>{{us.sexo  | sexo }}</td>
+        <td>{{us.juego}}</td>    
         <td>{{us.puntaje}}</td>
         <td>{{us.gano}}</td>
         
@@ -63,7 +67,7 @@
   </div>
 
   </div>
-  <div  [hidden]="mostrarSmarTable==false">
+  <div class="container" [hidden]="mostrarSmarTable==false">
 <ng2-smart-table [settings]="settings" [source]="source"></ng2-smart-table>
 </div>
 

@@ -2,6 +2,7 @@
 .fondo{
    
         background:#43A831 ;
+        background: url("/assets/imagenes/fondo4.jpg") ;
     /*    background:#080E07 url('http://www.swiss-net.com.ar/wp-content/uploads/Fondo-negro-con-estructura-en-lineas-746551.jpg') no-repeat center center;*/
         background-size:100% 100%;
       

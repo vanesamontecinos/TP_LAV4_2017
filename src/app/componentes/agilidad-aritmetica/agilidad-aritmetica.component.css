@@ -15,9 +15,26 @@
     padding-bottom: 30px;
     padding-left: 40px;
 }
+
+.container {
+    padding: 2px 16px;
+    background-color:#090A09;
+    background-size:100% 100%;
+    align-content: center;
+    align-items: center;
+    align-self: auto;
+    
+}
 .centrado{
     text-align: center; 
+    color: white;
 }
+.verde{
+    color: green;
+}
+.cursiva{
+    font-family: 'Rye', cursive;;
+  }
 .imagenDeMenu{
     width: 80px;
     height: 70px;

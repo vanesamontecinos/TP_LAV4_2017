@@ -22,8 +22,8 @@
    Segundo número: <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%" readonly/>
     
   </li-->
-
-  <h1 class=centrado> 
+<div class="container">
+  <h1 class="centrado cursiva"> 
       <img class="img-thumbnail"   src="../assets/imagenes/corriendo.gif" alt="Avatar" style="width:110px">
       Velocidad Aritmetica
       <img class="img-thumbnail"   src="../assets/imagenes/corriendo.gif" alt="Avatar" style="width:110px">
@@ -35,13 +35,13 @@
     <li>
   <div class=cuadro>
     <h1>
-    {{this.numeroUno}}</h1>
+    {{this.nuevoJuego.numeroUno}}</h1>
   </div>
   <div class=cuadro>
-    <h1>  {{this.eloperador}}</h1>
+    <h1>  {{this.nuevoJuego.eloperador}}</h1>
     </div>
     <div class=cuadro>
-      <h1>   {{this.numeroDos}}</h1>
+      <h1>   {{this.nuevoJuego.numeroDos}}</h1>
       </div>
     </li>
     </div>
@@ -54,7 +54,7 @@
       
        
         <li>
-    <input [(ngModel)]="numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:200px"/>
+    <input [(ngModel)]="numeroIngresado" placeholder="ingrese numero" name="this.numeroIngresado" type="text" class="form-control" style="width:200px"/>
       </li>
   </div>
   <li>
@@ -68,12 +68,13 @@
     <h2 [hidden]="ocultarVerificar"><p><i class="fa fa-spinner fa-spin"></i>Esperando numero...</p></h2>
     <h3 [hidden]="nuevoJuego.gano">Usted aún no gano </h3>
     <div [hidden]="!ocultarVerificar">
-    <h3 [hidden]="!nuevoJuego.gano"> FELICITACIONES! Usted adivino el número</h3>
+    <h3 class="verde" [hidden]="!nuevoJuego.gano"> FELICITACIONES! Usted adivino el número</h3>
     
-    <h3 [hidden]="!nuevoJuego.perdio">Respuesta Incorrecta!! el resultado es {{this.resultado}}</h3>
+    <h3 [hidden]="nuevoJuego.gano">Respuesta Incorrecta!! el resultado es {{this.nuevoJuego.resultado}}</h3>
   </div>
   </li>
 </div>
 </ul>
 
 </form>
+</div>

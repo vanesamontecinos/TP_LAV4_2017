@@ -1,3 +1,3 @@
-[{"cuit":91237256393,"usuario":"avolker0","email":"fdelamar0@wikipedia.org","puntaje":3466,"fecha":"12/03/2017","sexo":"M","gano":false},
-{"cuit":72838602215,"usuario":"edacres1","email":"sgreedyer1@cocolog-nifty.com","puntaje":9771,"fecha":"02/03/2017","sexo":"M","gano":false},
-{"cuit":88548055999,"usuario":"ofargher2","email":"hbelchem2@nytimes.com","puntaje":7879,"fecha":"18/03/2017","sexo":"F","gano":true}]
+[{"juego":"velocidad Aritmetica","usuario":"avolker0","email":"fdelamar0@wikipedia.org","puntaje":3466,"fecha":"12/03/2017","sexo":"M","gano":false},
+{"juego":"Anagrama","usuario":"edacres1","email":"sgreedyer1@cocolog-nifty.com","puntaje":9771,"fecha":"02/03/2017","sexo":"M","gano":false},
+{"juego":"Adivina el numero","usuario":"ofargher2","email":"hbelchem2@nytimes.com","puntaje":7879,"fecha":"18/03/2017","sexo":"F","gano":true}]

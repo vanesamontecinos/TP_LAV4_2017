@@ -1,8 +1,8 @@
 
 form {
-    border: 10px solid #f1f1f1;
+    border: 10px solid #0F0E0E;
     padding: 10px;
-    background:gray;
+    background:#817171;
 }
 
 input[type=text], input[type=password] {
@@ -115,4 +115,26 @@ span.psw {
 @keyframes fadeout {
     from {bottom: 30px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
+}
+.fuente{
+    color: white;
+}
+.container {
+    padding: 2px 16px;
+    background-color:#090A09;
+    background-size:100% 100%;
+    align-content: center;
+    align-items: center;
+    align-self: auto;
+    
+}
+.centrado{
+    text-align: center; 
+    color: white;
+}
+.cursiva{
+    font-family: 'Rye', cursive;;
+  }
+.verde{
+    color: green;
 }

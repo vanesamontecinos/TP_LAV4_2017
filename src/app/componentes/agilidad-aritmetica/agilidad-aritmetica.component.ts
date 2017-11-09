@@ -29,9 +29,12 @@ export class AgilidadAritmeticaComponent implements OnInit {
      this.Tiempo=5; 
     this.nuevoJuego = new JuegoAgilidad();
     console.info("Inicio agilidad"); 
-    this.completarnumeros(); 
+    //this.completarnumeros(); 
   }
   NuevoJuego() {
+    this.numeroIngresado=null;
+    this.nuevoJuego=new JuegoAgilidad();
+    this.completarnumeros();
     this.ocultarVerificar=false;
    this.repetidor = setInterval(()=>{ 
       
@@ -45,27 +48,11 @@ export class AgilidadAritmeticaComponent implements OnInit {
       }
       }, 900);
 
-this.completarnumeros();
+
   }
 completarnumeros(){
-  this.numeroUno =Math.floor( Math.random()*10)+1;
-  this.numeroDos =Math.floor( Math.random()*10)+1;
-  this.operador =Math.floor( Math.random()*3)+1;
-  switch(this.operador)
-  {
-    case 1:
-      this.eloperador="x";
-      this.resultado=this.numeroUno*this.numeroDos;
-      break;
-    case 2:
-    this.eloperador="+";
-    this.resultado=this.numeroUno+this.numeroDos;
-      break;
-    case 3:
-    this.eloperador="-";
-    this.resultado=this.numeroUno-this.numeroDos;
-      break;
-  }
+  this.nuevoJuego.generarNumeros();
+  
   this.nuevoJuego.gano=false;
   this.nuevoJuego.perdio=false;
 
@@ -75,15 +62,20 @@ completarnumeros(){
   {
     this.ocultarVerificar=false;
     clearInterval(this.repetidor);
-    if (this.numeroIngresado==this.resultado)
-    {this.nuevoJuego.gano=true;
+   this.nuevoJuego.numeroingresado=this.numeroIngresado;
+    if(this.nuevoJuego.verificar()){
+     // this.nuevoJuego.gano=true 
+    }
   
-  }
-    else {this.nuevoJuego.perdio=true;  console.log("Respuesta Incorrecta! El resultado es: "+this.resultado)}
-    this.numeroIngresado=null;
+  
+    else {this.nuevoJuego.perdio=true;  }
+    console.log("Respuesta Incorrecta! El resultado es: "+this.nuevoJuego.resultado);
+    //this.numeroIngresado=null;
     this.ocultarVerificar=true;
     clearInterval(this.repetidor);
     this.Tiempo=5; 
-  }  
+    
+    this.enviarJuego.emit(this.nuevoJuego);
 
+}
 }

@@ -117,23 +117,24 @@ this.mostrarSmarTable=true;
   }
   settings = {
     columns: {
-      "cuit": {
-        title: 'cuit'
-      },
       usuario: {
-        title: 'Full Name'
+        title: 'Jugador'
       },
       email: {
-        title: 'User Name'
+        title: 'Email'
       },
-      puntaje: {
-        title: 'Puntaje'
+      sexo: {
+        title: 'Sexo'
       },
       fecha: {
         title: 'Fecha'
       },
-      sexo: {
-        title: 'Sexo'
+     
+      juego: {
+        title: 'Juego'
+      },
+      puntaje: {
+        title: 'Puntaje'
       },
       gano: {
         title: 'Gano '

@@ -1,26 +1,14 @@
 
- <h1 class=centrado> 
+ <div class="container">
+ <h1 class="centrado fuente"> 
     <img class="img-thumbnail"   src="../assets/imagenes/ppt3.gif" alt="Avatar" style="width:110px">
    ¿ Piedra papel o tijera?
     <img class="img-thumbnail"   src="../assets/imagenes/ppt3.gif" alt="Avatar" style="width:110px">
   </h1> 
 <body >
 
-  <div class="CajaUno">
-    
-
-    <!--input type="text" readonly id="ganadas">
-    <input type="text" readonly id="perdidas">
-    <input type="text" readonly id="empatadas">
-    <form id="FormIngreso">
-    
-        <img src="../imagenes/interrogacion.jpg" >
-      
-      
-    </form-->
-    
-  </div>
-  <div [hidden]="yajugo" class="container" *ngIf="jugar">
+ 
+  <div [hidden]="yajugo" class="verde" *ngIf="jugar">
 
     <h1 class="letra" >Seleccione una opcion</h1>
     
@@ -43,7 +31,7 @@
           </button>
   
   </div>
-  <div [hidden]="!yajugo" class="container" >
+  <div [hidden]="!yajugo" class="verde" >
     <h1>{{this.Mensaje}}</h1>
     <h2>La maquina selecciono  {{this.eleccionMaquina}}</h2>
       <button  class=boton block width="80px" 
@@ -53,3 +41,4 @@
   </div>
 
 </body>
+</div>

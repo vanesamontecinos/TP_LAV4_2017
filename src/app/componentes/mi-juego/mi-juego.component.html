@@ -29,13 +29,12 @@
     </div> -->
 
     <div class="container-fluid text-center">    
-        <div class="row content">
-          <div class="col-sm-2 sidenav">
+        
           </div>
-          <div class="col-sm-8 text-left"> 
+          <div > 
             <div class="container">
               <div style="text-align:center">
-                 <h1 class=centrado> 
+                 <h1 class="centrado cursiva"> 
                     <img class="img-thumbnail"   src="../assets/imagenes/adivinanza.gif" alt="Avatar" style="width:110px">
                     {{nuevoJuego.nombre}}!
                     <img class="img-thumbnail"   src="../assets/imagenes/adivinanza.gif" alt="Avatar" style="width:110px">
@@ -58,14 +57,11 @@
                  
                 </div>
                 <div>
-                  <h2 [hidden]="!nuevoJuego.gano">Adivinaste!</h2>
+                  <h2 class="verde" [hidden]="!nuevoJuego.gano">Adivinaste!</h2>
                   <h3 [hidden]="nuevoJuego.gano">usted aún no gano </h3>
                 </div>
               </form>
               
-                <div id="msj"><h1>{{Mensajes}}</h1></div>
-              </div>
-          <div class="col-sm-2 sidenav">
-          </div>
-        </div>
+                <div id="msj"><h1 class="centrado">{{Mensajes}}</h1></div>
+           
       </div>

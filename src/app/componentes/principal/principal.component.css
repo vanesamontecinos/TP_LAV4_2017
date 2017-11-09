@@ -11,7 +11,10 @@ height: 70px;
     transform: translate(-50%, -50%);
     color: #100000;
     }
-
+    .cursiva{
+        font-family: 'Rye', cursive;
+        color: white;
+      }
     .card {
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         transition: 0.3s;
