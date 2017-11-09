@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { JugadoresService } from '../../servicios/jugadores.service';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 @Component({
   selector: 'app-jugadores-listado',
   templateUrl: './jugadores-listado.component.html',
@@ -43,5 +44,24 @@ export class JugadoresListadoComponent implements OnInit {
 
     })
   }
+  settings = {
+    columns: {
+      id: {
+        title: 'ID'
+      },
+      name: {
+        title: 'Full Name'
+      },
+      username: {
+        title: 'User Name'
+      },
+      email: {
+        title: 'Email'
+      }
+    }
+  };
+
+
+
 
 }

@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http, RequestOptions, RequestOptionsArgs, Response } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
+import 'rxjs/add/operator/map';
+
 
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -20,6 +22,10 @@ export class ArchivosjugadoresService {
     .catch(this.handleError);
   }
 
+  getUsers() {
+    return this.http.get("./../../assets/archivos/usuarios.json")
+      .map(response => response.json());
+  }
   private extraerDatos(resp:Response) 
   {
       return resp.json() || {};    

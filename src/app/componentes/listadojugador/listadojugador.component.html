@@ -1,14 +1,15 @@
 <ul class="nav nav-pills nav-justified">
   <li class="active"><a routerLink="/Principal">Sala de Juegos</a></li>
-  
-  <li><a (click)="Show()">Traer Todos</a></li>
-  <li><a (click)="filtTrue()">Gano</a></li>
-  <li><a (click)="filtFalse()">Perdio</a></li>
+  <li><a (click)="SmarTable()">Smart Table</a></li>
+  <li><a (click)="Show()">Tabla de Todos los usuarios</a></li>
+  <li><a (click)="filtTrue()">Tabla de Ganadores</a></li>
+  <li><a (click)="filtFalse()">Tabla de Perdedores</a></li>
 </ul>
 
 
 
-<div class="container">
+<div  class="container"  >
+  <div [hidden]="mostrarSmarTable" >
   <!--div style="text-align:center">
       <button class="btn" (click)="Show()"> Traer todos</button>
       <button class="btn" (click)="filtTrue()">Gano</button>
@@ -29,7 +30,7 @@
         <td>{{us.usuario}}</td>
         <td>{{us.email}}</td>
         <td>{{us.fecha}}</td>      
-        <td>{{us.sexo}}</td>
+        <td>{{us.sexo | sexo}}</td>
         <td>{{us.puntaje}}</td>
         <td>{{us.gano}}</td>
         
@@ -38,7 +39,7 @@
   
     <table class="table" [hidden]="mostrarFilt">
       <thead>
-        <th>Cuit</th>
+        <th>Cuiiiiit</th>
         <th>Usuario</th>
         <th>email</th>
         <th>fecha</th>
@@ -52,14 +53,19 @@
         <td>{{us.usuario}}</td>
         <td>{{us.email}}</td>
         <td>{{us.fecha}}</td>      
-        <td>{{us.sexo}}</td>
+        <td>{{us.sexo  | sexo }}</td>
         <td>{{us.puntaje}}</td>
         <td>{{us.gano}}</td>
         
       </tbody>
     </table>
-</div>
 
+  </div>
+
+  </div>
+  <div  [hidden]="mostrarSmarTable==false">
+<ng2-smart-table [settings]="settings" [source]="source"></ng2-smart-table>
+</div>
 
 
   

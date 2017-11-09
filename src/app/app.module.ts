@@ -46,7 +46,8 @@ import { QuienSoyComponent } from './componentes/quien-soy/quien-soy.component';
 import { AnagramaComponent } from './componentes/anagrama/anagrama.component';
 import { PiedrapapeltijeraComponent } from './componentes/piedrapapeltijera/piedrapapeltijera.component';
 import { MiJuegoComponent } from './componentes/mi-juego/mi-juego.component'
-
+import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { SexoPipe } from './pipes/sexo.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,11 +70,13 @@ import { MiJuegoComponent } from './componentes/mi-juego/mi-juego.component'
     QuienSoyComponent,
     AnagramaComponent,
     PiedrapapeltijeraComponent,
-    MiJuegoComponent
+    MiJuegoComponent,
+    SexoPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    Ng2SmartTableModule,
     RuteandoModule,HttpModule
 
     // NgbModule.forRoot(MiRuteo),
