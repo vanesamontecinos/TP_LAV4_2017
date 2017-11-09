@@ -25,7 +25,7 @@ export class ArchivosjugadoresService {
   }
 
   getUsers() {
-    return this.http.get("./../../assets/archivos/usuarios.json")
+    return this.http.get("/TP_LAV4_2017/assets/archivos/usuarios.json")
       .map(response => response.json());
   }
   private extraerDatos(resp:Response) 
