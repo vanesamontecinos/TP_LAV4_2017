@@ -16,6 +16,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ErrorComponent } from './componentes/error/error.component';
 import { PrincipalComponent } from './componentes/principal/principal.component';
+
 import { AgilidadAritmeticaComponent } from './componentes/agilidad-aritmetica/agilidad-aritmetica.component';
 import { MenuComponent } from './componentes/menu/menu.component';
 import { AdivinaMasListadoComponent } from './componentes/adivina-mas-listado/adivina-mas-listado.component';
@@ -49,6 +50,11 @@ import { MiJuegoComponent } from './componentes/mi-juego/mi-juego.component'
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { SexoPipe } from './pipes/sexo.pipe';
 import { GanoPipe } from './pipes/gano.pipe';
+import { IngresoComponent } from './componentes/ingreso/ingreso.component';
+import { TatetiComponent } from './componentes/tateti/tateti.component';
+import { CellComponent } from './componentes/tateti/presentation/cell/cell.component';
+import { BoardComponent } from './componentes/tateti/presentation/board/board.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,7 +79,9 @@ import { GanoPipe } from './pipes/gano.pipe';
     PiedrapapeltijeraComponent,
     MiJuegoComponent,
     SexoPipe,
-    GanoPipe
+    GanoPipe,
+    IngresoComponent,
+    TatetiComponent,CellComponent,BoardComponent
   ],
   imports: [
     BrowserModule,

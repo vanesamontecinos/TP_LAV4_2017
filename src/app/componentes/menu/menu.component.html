@@ -26,14 +26,15 @@
         </ul>
     </div>
   </nav-->
+  <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
   <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
+      <div class="container-fluid fuente">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
             <span class="icon-bar"></span>
                                   
           </button>
-          <a class="navbar-brand" routerLink="/Principal">Inicio</a>
+          <a class="navbar-brand fuente" routerLink="/Principal">Inicio</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
@@ -42,10 +43,14 @@
                 <li><a  (click)="Juego('Agilidad')">Agilidad</a></li>
                 <li><a  (click)="Juego('AdivinaMasListado')">Adivina+listado</a></li>
                 <li><a  (click)="Juego('AgilidadaMasListado')">Agilidad+listado</a></li>
+                <li><a  (click)="Juego('Anagrama')">Anagrama</a></li>
+                <li><a  (click)="Juego('Tateti')">Tateti</a></li>
+                <li><a  (click)="Juego('miJuego')">Adivina La Pelicula</a></li>
+                <li><a  (click)="Juego('PPT')">Piedra Papel o tijera</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Mis Datos</a></li>
-                  <li><a href="/Login"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
+                  <!--li><a href="#"><span class="glyphicon glyphicon-user"></span> Mis Datos</a></li-->
+                  <li><a href="/Ingreso"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
                 </ul>
         </div>
       </div>

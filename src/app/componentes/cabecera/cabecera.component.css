@@ -2,7 +2,7 @@
 {
     height: 200px;
     
-    background-image: url("/TP_LAV4_2017/assets/imagenes/fondo.jpg");
+    background-image: url("/assets/imagenes/fondo.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,6 +10,7 @@
 }
 .fuente{
     color: #1D1717;
+    font-family: 'Berkshire Swash', cursive;
 }
 
 .hero-text {
@@ -40,3 +41,22 @@ color: #181616;
 .cursiva{
     font-family: 'Rye', cursive;;
   }
+.button{
+  margin-left: 1px;
+  display: inline-block;
+  width: 50%;
+  padding: 5px 15px;
+  font-size: 15px;
+ 
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: rgb(33, 97, 34);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(0, 0, 0);
+}
+.b{
+    background-color: rgb(33, 97, 34);
+    border-radius: 15px;
+}

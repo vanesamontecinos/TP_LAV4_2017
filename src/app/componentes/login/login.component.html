@@ -21,18 +21,20 @@
     </div>
   </div>
 </div-->
+<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+
  <div class="container" >
-  <div class="jumbotron" style="padding:50px;">
+  <div class="jumbotron" style="padding:1px;">
     <form action="return true;">
       <div class="imgcontainer">
-        <img src="/TP_LAV4_2017/assets/imagenes/login.png" alt="Avatar" class="avatar" max-width="104" >
+        <img src="/assets/imagenes/login1.png" alt="Avatar" class="avatar" max-width="104" >
       </div>
 
       <div class="container">
-        <label><b>Usuario</b></label>
+        <label class="blanco"><b>Usuario</b></label>
         <input type="text" placeholder="Usuario"  [(ngModel)]="usuario"  name="uname" required>
 
-        <label><b>Clave</b></label>
+        <label  class="blanco"><b>Clave</b></label>
         <input type="password" placeholder="Clave"  [(ngModel)]="clave" name="psw" required>
             
         <button *ngIf="logeando"  (click)="MoverBarraDeProgreso()" >Ingresar</button>
@@ -46,10 +48,10 @@
         <input type="checkbox" checked="checked"> Recordar mis datos
       </div>
 
-      <div class="container" style="background-color:#f1f1f1">
+      <div class="container" style="background-color:#0E0D0D">
         <button type="button" class="cancelbtn">Cancelar</button>
         <button type="button" class="aceptbtn" routerLink="/Registro" >Registrarse</button>
-        <span class="psw">Te olvidaste <a href="#">la clave?</a></span>
+       
       </div>
      
     </form>

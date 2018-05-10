@@ -16,6 +16,7 @@ import { ListadosComponent } from '../componentes/listados/listados.component';
 
 import {ListadojugadorComponent } from '../componentes/listadojugador/listadojugador.component';
 import { JuegosComponent } from '../componentes/juegos/juegos.component';
+import { IngresoComponent } from '../componentes/ingreso/ingreso.component';
 import { RegistroComponent } from '../componentes/registro/registro.component';
 import { MenuCardComponent } from '../componentes/menu-card/menu-card.component';
 import { CabeceraComponent } from '../componentes/cabecera/cabecera.component';
@@ -23,14 +24,16 @@ import { QuienSoyComponent } from '../componentes/quien-soy/quien-soy.component'
 import { PiedrapapeltijeraComponent } from '../componentes/piedrapapeltijera/piedrapapeltijera.component'
 import { AnagramaComponent } from '../componentes/anagrama/anagrama.component';
 import { MiJuegoComponent } from '../componentes/mi-juego/mi-juego.component';
+import { TatetiComponent } from '../componentes/tateti/tateti.component';
 // declaro donde quiero que se dirija
 const MiRuteo = [
-{path: '' , component: PrincipalComponent},
+{path: '' , component: IngresoComponent},
 {path: 'Login' , component: LoginComponent},
 {path: 'QuienSoy' , component: QuienSoyComponent},
 {path: 'Registro' , component: RegistroComponent},
 {path: 'Principal' , component: PrincipalComponent},
 {path: 'Listado' , component: ListadoComponent},
+{path: 'Ingreso' , component: IngresoComponent},
 {path: 'ListadoJugador' , component: ListadojugadorComponent},
 { path: 'Juegos' ,
 component: JuegosComponent ,
@@ -42,6 +45,7 @@ children:
       {path: 'PPT' , component: PiedrapapeltijeraComponent},
       {path: 'Anagrama' , component: AnagramaComponent},
       {path: 'miJuego' , component: MiJuegoComponent},
+      {path: 'Tateti' , component: TatetiComponent},
       {path: 'Agilidad' , component: AgilidadAritmeticaComponent}]
 },
 {path: '**' , component: ErrorComponent},

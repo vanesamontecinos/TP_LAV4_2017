@@ -1,6 +1,9 @@
 
 import { Component, OnInit ,Input,Output,EventEmitter} from '@angular/core';
 import { JuegoAdivina } from '../../clases/juego-adivina'
+import { Jugador } from '../../clases/jugador';
+import { Juego } from '../../clases/juego'
+import { Listado } from '../../clases/Listado'
 
 @Component({
   selector: 'app-adivina-el-numero',
@@ -14,8 +17,18 @@ export class AdivinaElNumeroComponent implements OnInit {
   Mensajes:string;
   contador:number;
   ocultarVerificar:boolean;
+  jugador:Jugador;
+  newJuego:Juego;
+  registro:Listado;
+  jugador1:any;       
+
+  listado:Array<Listado>;
  
   constructor() { 
+
+//  this.jugador1=JSON.parse(localStorage.getItem('jugador'));
+ //   this.jugador=this.jugador1;
+ //   console.log(this.jugador1);
     this.nuevoJuego = new JuegoAdivina();
     console.info("numero Secreto:",this.nuevoJuego.numeroSecreto);  
     this.ocultarVerificar=false;
@@ -70,6 +83,22 @@ export class AdivinaElNumeroComponent implements OnInit {
     console.info("numero Secreto:",this.nuevoJuego.gano);  
     this.enviarJuego.emit(this.nuevoJuego);
     this.nuevoJuego= new JuegoAdivina();
+
+   /* this.jugador=JSON.parse(localStorage.getItem('jugador'));
+   // this.newJuego = new Juego('Adivina El Numero',true, 'algo');
+
+   this.listado=new Array<Listado>();
+   this.registro=new Listado(this.jugador.nombre,'Adivina el numero',true);
+   this.listado.push(this.registro);
+   localStorage.setItem('Lista', JSON.stringify(this.listado));*/
+  
+ 
+   
+
+
+
+
+
   }  
 
   MostarMensaje(mensaje:string="este es el mensaje",ganador:boolean=false) {

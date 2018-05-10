@@ -12,8 +12,8 @@ export class Jugador {
         if (pass)
           this.pass = pass;
         
-        else
-          this.nombre= "invitado";
+       // else
+         // this.nombre= "invitado";
       }
     
 }

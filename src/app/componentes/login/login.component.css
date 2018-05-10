@@ -1,10 +1,15 @@
 
 form {
-    border: 10px solid #f1f1f1;
+    border: 10px solid #131212;
     padding: 10px;
-    background:gray;
+    background-image: url("/assets/imagenes/espacio.gif");
+  
+   
 }
-
+fondo{
+    
+    background-image: url("/assets/imagenes/espacio.gif");
+}
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -13,13 +18,41 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-
+blanco{
+    color: white;
+}
 button {
-    background-color: #4CAF50;
+    background-color: #337C36;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
+    cursor: pointer;
+    width: 100%;
+    font-family: 'Berkshire Swash', cursive;
+
+
+    margin-left: 1px;
+    display: inline-block;
+    width: 90%;
+    padding: 5px 15px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: rgb(33, 97, 34);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px rgb(0, 0, 0);
+
+    border: none;
+    outline: 0;
+ 
+    padding: 8px;
+    color: white;
+   /* background-color: #000;*/
+    text-align: center;
     cursor: pointer;
     width: 100%;
 }
@@ -65,5 +98,6 @@ span.psw {
     }
     .cancelbtn {
        width: 100%;
+       font-family: 'Berkshire Swash', cursive;
     }
 }

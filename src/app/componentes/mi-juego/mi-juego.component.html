@@ -35,12 +35,12 @@
             <div class="container">
               <div style="text-align:center">
                  <h1 class="centrado cursiva"> 
-                    <img class="img-thumbnail"   src="/TP_LAV4_2017/assets/imagenes/adivinanza.gif" alt="Avatar" style="width:110px">
+                    <img class="img-thumbnail"   src="/assets/imagenes/adivinanza.gif" alt="Avatar" style="width:110px">
                     {{nuevoJuego.nombre}}!
-                    <img class="img-thumbnail"   src="/TP_LAV4_2017/assets/imagenes/adivinanza.gif" alt="Avatar" style="width:110px">
+                    <img class="img-thumbnail"   src="/assets/imagenes/adivinanza.gif" alt="Avatar" style="width:110px">
                   </h1> 
 
-               </div>
+              
                <div *ngIf="ocultarComenzar==true" class=padding>
                <img  class="img-thumbnail"  src="{{nuevoJuego.palabraDesordenada}} " alt="Avatar" style="width:400px">
               </div>
@@ -48,7 +48,7 @@
               
 
                      
-                     <h2 [hidden]="ocultarVerificar"> <input [(ngModel)]="nuevoJuego.palabraIngresada" placeholder="ingrese su respuesta " name="palabraOrdenadaa" type="text" class="form-control" style="width:50%"/>
+                     <h2 [hidden]="ocultarVerificar"> <input class="text-align:center" [(ngModel)]="nuevoJuego.palabraIngresada" placeholder="Ingrese el Nombre de la PELICULA " name="palabraOrdenadaa" type="text" class="form-control" style="width:100% "/>
                       </h2>
                      <div class=padding> 
                   <h2 [hidden]="ocultarVerificar"><button  *ngIf="nuevoJuego.esperando!=0" (click)="verificar()" class="btn btn-success btn-lg">Verificar {{Tiempo}} </button></h2>
@@ -58,10 +58,10 @@
                 </div>
                 <div>
                   <h2 class="verde" [hidden]="!nuevoJuego.gano">Adivinaste!</h2>
-                  <h3 [hidden]="nuevoJuego.gano">usted aún no gano </h3>
+                  
                 </div>
               </form>
               
                 <div id="msj"><h1 class="centrado">{{Mensajes}}</h1></div>
-           
+              </div>
       </div>

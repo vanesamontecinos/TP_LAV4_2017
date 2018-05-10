@@ -13,6 +13,8 @@ export class LoginComponent implements OnInit {
   private subscription: Subscription;
   usuario = '';
   clave= '';
+  jugador:'';
+  contraseña:'';
   progreso: number;
   progresoMensaje="esperando..."; 
   logeando=true;
@@ -32,10 +34,35 @@ export class LoginComponent implements OnInit {
   }
 
   Entrar() {
-    if (this.usuario === 'admin' && this.clave === 'admin') {
-      this.router.navigate(['/Principal']);
+
+
+
+
+  var JugadoresRegistrados2=JSON.parse(localStorage.getItem('datos'));
+  var noentro:boolean=true;
+  console.log(JugadoresRegistrados2);
+  for(let algo of JugadoresRegistrados2)
+  {
+ // this.usuario=algo.usuario;
+ // this.clave=algo.contraseña;
+
+    if (this.usuario === algo.nombre && this.clave === algo.pass) {
+      console.log('registrado');
+      this.router.navigate(['/Juegos']);
+      noentro=false;
+      this.jugador=algo.nombre;
+      this.contraseña=algo.nombre;
+
+
+
     }
   }
+  if (noentro){
+    console.log('no esta registrado');
+    this.router.navigate(['/Registro']);
+  }
+
+}
   MoverBarraDeProgreso() {
     
     this.logeando=false;

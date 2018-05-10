@@ -20,6 +20,8 @@ export class ListadoDeResultadosComponent implements OnInit {
 
   ver() {
     console.info(this.listado);
+    this.listado=JSON.parse(localStorage.getItem('Lista'));
+    console.log(this.listado);
   }
 
 }
