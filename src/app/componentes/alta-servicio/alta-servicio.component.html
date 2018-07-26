@@ -1,0 +1,30 @@
+<div >
+    <form [formGroup]="form" >
+      <div class="form-group">
+        <label>Nombre del sitio:</label>
+        <input type="text" class="form-control" formControlName="nombre">
+      </div>
+      <div class="form-group">
+          <label>MB solicitados:</label>
+          <input type="text" class="form-control" formControlName="mb">
+      </div>
+      
+   
+      <!--div class="form-group">
+        <label>Monto:</label>
+        <label *ngIf="!this.primero" class="radio-inline">
+          <input  type="radio" name="monto" formControlName="monto" value="0">Gratis
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="monto" formControlName="monto" value="300">300$
+        </label>
+    
+      </div-->
+    
+      <p [ngStyle]="{'color': 'red'}" *ngIf="!form.valid">{{mensajeErrorFormAlta}}</p>
+      <button type="button" class="btn btn-default" (click)="guardar()">Guardar</button>
+      <p [ngStyle]="{'color': 'grenn'}" *ngIf="seguardo">{{mensajeOKFormAlta}}</p>
+    </form>
+    </div>
+    <!--app-listado [listado]="this.servicios"> </app-listado-->
+    

@@ -1,0 +1,51 @@
+<div class="container">
+  <div>
+    MIS MASCOTAS
+  </div>
+ 
+  <button type="button" (click)="verPerros()" class="btn btn-warning">Perros</button>
+  <button type="button" (click)="verGatos()" class="btn btn-warning">Gatos</button>
+  
+     <!--button type="button" (click)="listarTodos()" class="btn btn-warning">Actualizar</button-->
+     
+   <table class="table">
+     <thead>
+       <tr>
+         <th>CLiente</th>
+         <th>Nro de ficha</th>
+         <th>Raza</th>
+         <th>Color</th>
+         <th>Edad</th>
+         <th>Tipo</th>
+         <th>fecha</th>
+         <th>Hora</th>
+         <th>Estado</th>
+       </tr>
+     </thead>
+     <tbody *ngFor="let turno of servicios" class="info">  
+       <tr appDirectiva *ngIf='turno.usuario==this.emailLogueado'>
+           
+         <td >{{ turno.usuario }}</td>
+         <td >{{ turno.nroficha }}</td>
+         <td >{{ turno.raza }}</td>
+         <td >{{ turno.color }}</td>
+         <td >{{ turno.edad  | edad }}</td>
+         <td >{{ turno.tipo }}</td>
+         <td >{{ turno.fecha }}</td>
+         <td >{{ turno.hora }}</td>
+         <td >{{ turno.estado }}</td>
+         
+ 
+         <td>
+          <!--app-mascota [mascota]="mascota.id"></app-mascota-->
+          <button type="button" class="btn btn-info" >Cambiar estado</button>
+          
+         </td> 
+         
+       </tr>
+     
+    
+     </tbody>
+   </table>
+   
+ </div>

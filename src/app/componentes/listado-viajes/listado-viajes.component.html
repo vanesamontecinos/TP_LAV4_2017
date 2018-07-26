@@ -1,0 +1,44 @@
+<button type="button" class="btn btn-info" (click)="listarServicios()">Mostrar Todos</button>
+<button type="button" class="btn btn-info" (click)="MostrarSolicitados()">Mostrar Solicitados</button>
+<button type="button" class="btn btn-info" (click)="MostrarRealizados()">Mostrar Realizados</button>
+<button type="button" class="btn btn-info" (click)="MostrarCancelados()">Mostrar Cancelados</button>
+
+<table class="table table-condensed" >
+    <thead>
+      <tr>
+        <th>Cliente</th>
+        <th>Origen</th>
+        <th>Destino</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+       
+        <th>Comodidad</th>
+        <th>Remisero</th>
+        <th>Vehiculo</th>
+        <th>Estado</th>
+       
+      </tr>
+    </thead>
+    <tbody *ngFor="let algo of listado">
+      <tr >
+          <td>{{algo.cliente}} </td>
+        <td>{{algo.origen}} </td>
+        <td>{{algo.destino}} </td> 
+        <td >{{algo.fecha}} </td>  
+        <td>{{algo.hora}} </td>
+       
+        <td>{{algo.tipo}} </td> 
+        <td >{{algo.remisero}} </td>  
+      
+        <td >{{algo.vehiculo}} </td>  
+        <td >{{algo.estado}} </td>   
+            
+        
+      </tr>
+     
+    </tbody>
+  </table>
+
+  <div>
+      
+   

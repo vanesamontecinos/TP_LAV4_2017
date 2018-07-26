@@ -1,0 +1,16 @@
+<h3>Nombre: {{ this.nombre }}</h3>
+<h3>Origen: {{ ruta.origen }}</h3>
+<h3>Destino: {{ ruta.destino }}</h3>
+<h3>Destino: {{ ruta.origenLongitud }}</h3>
+
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<!--agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  <agm-marker [latitude]="lat2" [longitude]="lng2"></agm-marker>
+</agm-map-->
+
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-direction [origin]="origin" [destination]="destination">
+  </agm-direction>
+</agm-map>

@@ -1,0 +1,28 @@
+<form [formGroup]="form" >
+   
+  
+    <div class="form-group">
+        <label for="modelo">Modelo</label>
+        <input type="text" formControlName="modelo" >
+      </div>
+  
+      <div class="form-group">
+          <label for="anio">Año</label>
+          <input type="text" formControlName="anio" >
+          </div>
+  
+          <div class="form-group">
+              <label for="color">Color</label>
+              <input type="text" formControlName="color" >
+              </div>
+              <div class="form-group">
+                  <label for="comodidades">Comodidades</label>
+                  <input type="text" formControlName="comodidades" >
+                  </div>
+      
+  
+    <p [ngStyle]="{'color': 'red'}" *ngIf="!form.valid">{{mensajeErrorFormAlta}}</p>
+    <button type="button" class="btn btn-default" (click)="guardar()">Guardar</button>
+    <button type="button" class="btn btn-default" (click)="volver()">Volver</button>
+    <p [ngStyle]="{'color': 'grenn'}" *ngIf="seguardo">{{mensajeOKFormAlta}}</p>
+  </form>

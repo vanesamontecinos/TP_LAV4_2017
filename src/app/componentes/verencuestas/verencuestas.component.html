@@ -1,0 +1,57 @@
+<div *ngIf='!verDetalle'>
+<h2>ENCUESTAS</h2>
+<table class="table table-condensed" >
+    <thead>
+      <tr>
+          <th>Cliente</th>
+        <th>Trato del Remisero</th>
+        <th>Se cumplio el horario</th>
+        <th>Que le parecio la plataforma</th>
+        <th>Nos recomendaria</th>
+       
+       
+      </tr>
+    </thead>
+    <tbody *ngFor="let algo of encuestas" >
+      <tr  >
+          <td>{{algo.cliente}} </td>
+          <td>{{algo.trato | encuesta}} </td>
+        <td>{{algo.horarioCumplido}} </td>
+        <td>{{algo.plataforma | encuesta}} </td> 
+        <td >{{algo.recomendable}} </td>  
+          
+        <td>
+            <button  type="button" class="btn btn-info" (click)="cambiar(algo)">Ver Encuesta Completa</button>
+           </td>    
+        
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+  <div *ngIf='verDetalle'>
+    <h3>Datos del viaje</h3>
+      <div *ngFor="let algo of viaje">
+          <p> Cliente: {{algo.cliente}}</p>
+              <p>  Viaje Nro: {{algo.id}}</p>
+                  <p>   Fecha: {{algo.fecha}}</p>
+                      <p>    Origen: {{algo.origen}}</p>
+                          <p>    Destino: {{algo.destino}}</p>
+          <p>    Comodidad: {{algo.tipo}}</p>
+          <p>   Monto: {{algo.monto}}</p>
+      </div>
+      <h3>Datos de la Encuesta</h3>
+     <p> Que te parecio el trato del remisero: {{preg1 | encuesta}}</p>
+     <p> Se cumplio el horario estipulado: {{preg2}}</p>
+     <p> El vehiculo fue acorde a lo solicitado: {{preg3}}</p>
+     <p> El precio fue acorde al servicio: {{preg4}}</p>
+     <p> Que te parecio la plataforma web: {{preg5 | encuesta}}</p>
+     <p>  Nos recomendarias: {{preg6}}</p>
+     <p>  Comentarios: {{preg7}}</p>
+
+  <img class="img-thumbnail"   src="{{foto1}}" alt="Avatar" style="width:250px">
+  <img class="img-thumbnail"   src="{{foto2}}" alt="Avatar" style="width:250px">
+  <img class="img-thumbnail"   src="{{foto3}}" alt="Avatar" style="width:250spx">
+  <p> <button  type="button" class="btn btn-info" (click)="volver()">Volver</button></p>
+  
+</div>

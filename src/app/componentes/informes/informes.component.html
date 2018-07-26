@@ -1,0 +1,113 @@
+<div class="content-heading" >
+  <div>
+    <H1>GRAFICOS ESTADISTICOS</H1>
+      <small></small>
+  </div>
+</div>
+<!--ngx-spinner
+bdColor="rgba(179,239,229,0.8)"
+size="medium"
+color="#171515"
+loadingText="Cargando..."
+type="ball-pulse-sync">
+</ngx-spinner-->
+
+
+<!--div class="col-xl-12 col-lg-12 col-xs-12" style="display: block">
+  <canvas baseChart
+          [data]="[{
+            data: [totalClientes, totalRemiseros, totalEncargados]}]"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType"
+          [colors]="pieColors"
+          [options]="pieOptions"
+           height="80"
+          
+         ></canvas>
+</div-->
+<div class="row" >
+
+  <div class="col-xl-12 col-lg-12 col-xs-12">
+      <h3 style="text-align:center">Cantidad de Usuarios</h3>
+      <div>
+         <canvas baseChart [chartType]="'pie'" [options]="pieOptions" [datasets]="[{
+          data: [totalClientes, totalRemiseros, totalEncargados]}]" [colors]="pieColors" [labels]="pieData.labels"  height="80"></canvas>
+          <br>
+        </div>
+   </div>
+   <br>
+
+  <!--div class="col-xl-6 col-lg-6 col-xs-6">
+  <h4 style="margin-top: 50px">Resultados más destacados de la encuesta: </h4>
+  <div>
+          <p style="text-align: center">¿Estás conforme con el costo del servicio?</p>
+          <canvas baseChart [chartType]="'bar'" [options]="barOptions" [datasets]="[{
+              
+          data: [totalPreg4Si, totalPreg4No]}]" [colors]="barColors" [labels]="barData.labels" [legend]="false" height="80"></canvas>
+  </div> 
+</div> 
+
+<div class="col-xl-6 col-lg-6 col-xs-6">
+      <h4 style="margin-top: 50px"> </h4> 
+      <div>
+              
+      <p style="text-align: center">¿Volverías a elegirnos?</p>
+         <canvas baseChart [chartType]="'doughnut'" [options]="doughnutOptions" [datasets]="[{
+          
+      data: [totalPreg1Si, totalPreg1No,totalPreg1Talvez]}]"  [colors]="doughnutColors" [labels]="doughnutData.labels" [legend]="false" height="80"></canvas>
+      </div>
+   </div>
+   <div class="col-xl-12 col-lg-12 col-xs-12">
+          <h4> </h4> 
+          <div>
+                  
+          <p style="text-align: center">¿Con qué frecuencia utiliza nuestro servicio?</p>
+             <canvas baseChart [chartType]="'pie'" [options]="pieOptions2"  [datasets]="[{
+              
+          data: [preg7uno, preg7dos,preg7tres]}]"  [colors]="pieColors2" [labels]="pieData2.labels2" [legend]="false" height="80"></canvas>
+          </div>
+       </div-->
+
+       <div>
+         <h2>.. RESPUESTAS DE ENCUESTAS</h2>
+         <br>
+         <h3 style="text-align:center">Que le parecio el trato del remisero</h3>
+        <div style="display: block">
+          <canvas baseChart
+                  [datasets]="[{data: [this.preg1MB,this.preg1B,this.preg1R,this.preg1M]}]"
+                  [labels]="barData.labels"
+                  [legend]="false"
+                  height="80"
+                  [chartType]="barChartType"
+                  ></canvas>
+        </div>
+        
+      </div>
+
+
+<div>
+    
+    <h3 style="text-align:center">El precio le parecio acorde al viaje?</h3>
+   <div style="display: block">
+     <canvas baseChart
+             [datasets]="[{data: [this.preg4SI,this.preg4CARO,this.preg4BARATO]}]"
+             [labels]="bar2Data.labels"
+             [legend]="false"
+            
+             [chartType]="barChartType"
+             height="80"
+             ></canvas>
+   </div>
+  
+ </div>
+
+ <div class="col-xl-12 col-lg-12 col-xs-12">
+    <h3 style="text-align:center">Nos recomendaria?</h3>
+    <div>
+       <canvas baseChart [chartType]="'pie'" [options]="pieOptions" [datasets]="[{
+        data: [this.preg5SI, this.preg5NO, this.preg5TALVEZ]}]" [colors]="pieColors" [labels]="pieData2.labels2"  height="80"></canvas>
+    </div>
+ </div>
+
+
+</div>

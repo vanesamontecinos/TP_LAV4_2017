@@ -1,0 +1,60 @@
+<h2>EMPLEADOS</h2>
+<button  type="button" class="btn btn-info" (click)="AgregarRemisero()">Agregar Empleado</button>
+
+<table class="table table-condensed" >
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Perfil</th>
+        <th>Estado</th>
+       
+       
+      </tr>
+    </thead>
+    <tbody *ngFor="let algo of usuarios" >
+      <tr *ngIf='algo.perfil=="REMISERO"' >
+          <td>{{algo.nombre}} </td>
+        <td>{{algo.mail}} </td>
+        <td>{{algo.perfil}} </td> 
+        <td class="verde"  *ngIf='algo.estado=="HABILITADO"'>{{algo.estado}} </td>  
+        <td class="rojo"  *ngIf='algo.estado=="DESHABILITADO"'>{{algo.estado}} </td>   
+        <td>
+            <button  type="button" class="btn btn-info" (click)="cambiar(algo)">Cambiar Estado</button>
+           </td>    
+        
+      </tr>
+     
+    </tbody>
+  </table>
+  <h2>MIS VEHICULOS</h2>
+  <button  type="button" class="btn btn-info" (click)="AgregarVehiculo()">Agregar Vehiculo</button>
+  
+  <table class="table table-condensed" >
+      <thead>
+        <tr>
+          <th>Modelo</th>
+          <th>Año</th>
+          <th>Color</th>
+          <th>Comodidades</th>
+          <th>Estado</th>
+          
+         
+        </tr>
+      </thead>
+      <tbody *ngFor="let vehiculo of vehiculos" >
+        <tr>
+            <td>{{vehiculo.modelo}} </td>
+          <td>{{vehiculo.anio}} </td>
+          <td>{{vehiculo.color}} </td> 
+          <td >{{vehiculo.comodidades}} </td>  
+          <td class="verde"  *ngIf='vehiculo.estado=="HABILITADO"' >{{vehiculo.estado}} </td>  
+          <td class="rojo" *ngIf='vehiculo.estado=="DESHABILITADO"' >{{vehiculo.estado}} </td>  
+          <td>
+            <button  type="button" class="btn btn-info" (click)="cambiarVehiculo(vehiculo)">Cambiar Estado</button>
+           </td>  
+      
+        </tr>
+       
+      </tbody>
+    </table>

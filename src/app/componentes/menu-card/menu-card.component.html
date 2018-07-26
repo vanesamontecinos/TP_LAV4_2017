@@ -4,21 +4,38 @@
     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
     <div  >
     
-  <div class="card ">
-      <img class="img-thumbnail"   src="/assets/imagenes/pensando.gif" alt="Avatar" style="width:100%">
-      <h1 class="cursiva" >Velocidad y agilidad aritmética </h1>
-      <p class="title">Juego de agilidad mental</p>
-      <p>UTN FRA </p>
+  <div *ngIf="this.cliente" class="card ">
+      <img class="img-thumbnail"   src="/assets/imagenes/444.gif" alt="Avatar" style="width:100%">
+      <h1 class="cursiva" >Realizar Reserva </h1>
+      <p class="title">Es facil y Sencillo</p>
+      
   
-      <a href="#"><i class="fa fa-dribbble"></i></a> 
-      <a href="#"><i class="fa fa-twitter"></i></a> 
-      <a href="#"><i class="fa fa-linkedin"></i></a> 
-      <a href="#"><i class="fa fa-facebook"></i></a> 
-      <p>           <button class="button fuenteBoton"  (click)="Juego('Agilidad')">Jugar</button></p>
+      
+      <p>   <button class="button fuenteBoton"  (click)="Principal('AltaViaje')">Reservar</button></p>
     
     </div>
+    <div *ngIf="this.encargado" class="card ">
+        <img class="img-thumbnail"   src="/assets/imagenes/444.gif" alt="Avatar" style="width:100%">
+        <h1 class="cursiva" >Todos los Viajes </h1>
+        <p class="title">Listado de todos los viajes realizados, cancelados y solicitados</p>
+        
+    
+        
+        <p>   <button class="button fuenteBoton"  (click)="Principal('ListadoViajes')">Ver Viajes</button></p>
+      
+      </div>
+      <div *ngIf="this.remisero" class="card ">
+          <img class="img-thumbnail"   src="/assets/imagenes/444.gif" alt="Avatar" style="width:100%">
+          <h1 class="cursiva" >Viajes Asignados </h1>
+          <p class="title">Listado de todos los viajes asignados al usuario</p>
+          
+      
+          
+          <p>   <button class="button fuenteBoton"  (click)="Principal('ViajesAsignados')">Ver Viajes</button></p>
+        
+        </div>
   
-    <div class="card">
+    <!--div class="card">
       <img class="img-thumbnail" src="/assets/imagenes/ppt2.gif" alt="Avatar" style="width:100%">
       <h1 class="cursiva" >Piedra Papel  o Tijera</h1>
       <br/>
@@ -88,5 +105,5 @@
         <a href="#"><i class="fa fa-facebook"></i></a> 
         <p>           <button class="button fuenteBoton"  (click)="Juego('Tateti')">Jugar</button></p>
       </div>
-  </div>
+  </div-->
 </div>

@@ -1,0 +1,124 @@
+<div class="container">
+  <div>
+    MIS MASCOTAS
+  </div>
+ 
+     <!--button type="button" (click)="listarTodos()" class="btn btn-warning">Actualizar</button-->
+     
+   <table class="table">
+     <thead>
+       <tr>
+         <th>Nro de ficha</th>
+         <th>Raza</th>
+         <th>Color</th>
+         <th>Edad</th>
+         <th>Tipo</th>
+         <th>Acciones</th>
+       </tr>
+     </thead>
+     <tbody *ngFor="let mascota of mascotas" class="info">  
+       <tr appDirectiva *ngIf='mascota.usuario==this.emailLogueado'>
+           
+         <td >{{ mascota.nroficha }}</td>
+         <td >{{ mascota.raza }}</td>
+         <td >{{ mascota.color }}</td>
+         <td >{{ mascota.edad }}</td>
+         <td >{{ mascota.tipo }}</td>
+         
+ 
+         <td>
+          <!--app-mascota [mascota]="mascota.id"></app-mascota-->
+          <button type="button" class="btn btn-info" (click)="Asignar(mascota)">Asignar Turno</button>
+          
+         </td> 
+         
+       </tr>
+     
+    
+     </tbody>
+   </table>
+   
+ </div>
+ 
+ <div class="container">
+ <form [formGroup]="form" *ngIf="mostrarform">
+     
+         <div class="form-group">
+           <label>Nombre de la Mascota : {{this.nombreMascota}}</label>
+           <br/>
+         
+         </div>
+         
+         <div class="form-group">
+             <label>Fecha :</label>
+             <input type="text" class="form-control" formControlName="fecha">
+         </div>
+
+         <div class="form-group">
+          <label>Horario :</label>
+          <input type="text" class="form-control" formControlName="hora">
+      </div>
+        
+       
+         <p [ngStyle]="{'color': 'red'}" *ngIf="!form.valid">{{mensajeErrorFormAlta}}</p>
+         <button type="button" class="btn btn-default" (click)="guardar()">Guardar</button>
+         <p [ngStyle]="{'color': 'grenn'}" *ngIf="seguardo">{{mensajeOKFormAlta}}</p>
+      
+ 
+ 
+ </form>
+ </div>
+ BUSCADOR
+ 
+ <!--app-busqueda (pizzaNoEncontrada)="mostrarMensaje($event)"></app-busqueda>
+ <p [ngStyle]="{'color': 'red'}" *ngIf="mostrarResultado">
+   {{resultadoBusqueda.nombre }}
+   {{resultadoBusqueda.tipo }}
+   {{resultadoBusqueda.fechaDeNacimiento }}
+   <img src="{{resultadoBusqueda.RutaDeFoto}}" class="media-object" style="width:60px">
+   
+ </p>
+ <br/>
+ 
+ 
+ 
+ <button type="button" (click)="nopagaron()" class="btn btn-warning">No Pagaron</button>
+ <button type="button" (click)="pagaron()" class="btn btn-warning">Pagaron</button>
+ 
+ <button type="button" (click)="listarServicios()" class="btn btn-warning">TODOS</button>
+ 
+ 
+ <div class="checkbox">
+     <button type="button" (click)="mostrarForm = !mostrarForm" class="btn btn-warning">Editar</button>
+ </div>
+ <div *ngIf="mostrarForm">
+ <app-alta></app-alta>
+ </div>
+ 
+ 
+ <table class="table" >
+     <thead>
+       <tr>
+         <th>Nombre</th>
+         <th>Fecha</th>
+         <th>Tipo de servicio</th>
+         <th>Pagado</th>
+       
+       </tr>
+     </thead>
+     <tbody *ngFor="let algo of servicios" class="info">  
+       <tr>
+           
+         <td >{{ algo.nombreMascota }}</td>
+         <td >{{ algo.fecha }}</td>
+         <td >{{ algo.tipo }}</td>
+         <td >{{ algo.pagado }}</td>
+         <td ><app-pagar [algo]="algo"></app-pagar></td>
+         
+       
+         
+       </tr>
+    
+     </tbody>
+   </table-->
+ 

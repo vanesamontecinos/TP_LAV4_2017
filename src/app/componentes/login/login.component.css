@@ -2,7 +2,8 @@
 form {
     border: 10px solid #131212;
     padding: 10px;
-    background-image: url("/assets/imagenes/espacio.gif");
+    background-image: url("/assets/imagenes/camino.gif");
+   /* background-size: cover;*/
   
    
 }

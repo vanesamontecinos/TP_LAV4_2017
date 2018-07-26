@@ -2,7 +2,7 @@
 {
     height: 200px;
     
-    background-image: url("/assets/imagenes/fondo.jpg");
+    background-image: url("/assets/imagenes/cabecera.gif");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -39,6 +39,7 @@ background-color: #CFC2C2;
 color: #181616;
 }
 .cursiva{
+    color: rgba(255, 255, 255, 0.66);
     font-family: 'Rye', cursive;;
   }
 .button{

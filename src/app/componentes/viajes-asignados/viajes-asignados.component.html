@@ -1,0 +1,51 @@
+<table class="table table-condensed" *ngIf='mostrarTabla'>
+    <thead>
+      <tr>
+        <th>Cliente</th>
+        <th>Origen</th>
+        <th>Destino</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+       
+        <th>Comodidad</th>
+        <th>Remisero</th>
+        <th>Vehiculo</th>
+        <th>Estado</th>
+       
+      </tr>
+    </thead>
+    <tbody *ngFor="let algo of listado" >
+      <tr *ngIf='algo.remisero==this.nombreUsuario' >
+          <td>{{algo.cliente}} </td>
+        <td>{{algo.origen}} </td>
+        <td>{{algo.destino}} </td> 
+        <td >{{algo.fecha}} </td>  
+        <td>{{algo.hora}} </td>
+       
+        <td>{{algo.tipo}} </td> 
+        <td >{{algo.remisero}} </td>  
+      
+        <td >{{algo.vehiculo}} </td>  
+        <td >{{algo.estado}} </td>   
+        <td>
+            <button *ngIf="algo.estado=='SOLICITADO'"  type="button" class="btn btn-info" (click)="CargarPago(algo)">Cargar Pago</button>
+           </td>    
+        
+      </tr>
+     
+    </tbody>
+  </table>
+<div *ngIf="mostrarForm" >
+  <form [formGroup]="form" >
+      
+     
+       <div class="form-group">
+           <label for="monto">Cargar Pago o cuenta Corriente</label>
+           <input type="text" formControlName="monto" >
+         </div> 
+     
+       <p [ngStyle]="{'color': 'red'}" *ngIf="!form.valid">{{mensajeErrorFormAlta}}</p>
+       <button  type="button" class="btn btn-default" (click)="guardar()">Guardar</button>
+       <p [ngStyle]="{'color': 'grenn'}" *ngIf="seguardo">{{mensajeOKFormAlta}}</p>
+     </form>
+    </div>

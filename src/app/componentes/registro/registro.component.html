@@ -1,51 +1,38 @@
-<body>
-  <div class="jumbotron blanco">
-    <h2 id="terminos">Terminos y condiciones</h2>
-    <p> Es obligatorio completar el formulario de registración en todos sus campos con datos válidos para poder utilizar los servicios que brinda el sitio. </p>
-    <p>  El futuro Usuario deberá completarlo con su información personal de manera exacta, precisa y verdadera ("Datos Personales") y asume el compromiso de actualizar los Datos Personales conforme resulte necesario. </p>
-    <p>  El Usuario presta expresa conformidad con que el sitio utilice diversos medios para identificar sus datos personales, asumiendo el Usuario la obligación de revisarlos y mantenerlos actualizados. </p>
-    <p>  El sitio NO se responsabiliza por la certeza de los Datos Personales de los Usuarios. Los Usuarios garantizan y responden, en cualquier caso, de la veracidad, exactitud, vigencia y autenticidad de sus Datos Personales.</p>
+<app-cabecera></app-cabecera>
     
-  
-  
-  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Acepto</button>
-  <button  class="cancelbtn"  routerLink="/Principal" style="width:auto;">No acepto</button>
-</div> 
-  <div id="id01" class="modal">
-    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
-    <form class="modal-content animate" >
-      <div class="container">
-        <label><b>Email</b></label>
-        <input type="text" [(ngModel)]="email"  placeholder="Ingresa tu correo" name="email" required>
-  
-        <label><b>Clave</b></label>
-        <input type="password" [(ngModel)]="psw"  placeholder="Aca la clave" name="psw" required>
-  
-        <label><b>Repita la clave</b></label>
-        <input type="password" [(ngModel)]="psw2"  placeholder="Repetir clave" name="psw2" required>
-        <input type="checkbox" checked="checked">Recordar mis datos
-        <p>creando la cuenta aceptando los<a  onclick="document.getElementById('id01').style.display='none'"  >Terminos y condiciones</a>.</p>
-  
-        <div class="clearfix">
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Me arrepenti</button>
-            
-          
-          <button type="button"  color="primary" (click)="registrarse()" >Registrarme</button>
-        </div>
-      </div>
-    </form>
+    <div class="container fuente" >
+      <br>
+<form [formGroup]="form" >
+  <div class="form-group">
+    <label>Nombre:</label>
+    <input type="text" class="form-control" formControlName="nombre">
   </div>
+
+  <div class="form-group">
+    <label>Email:</label>
+    <input type="text" class="form-control" formControlName="mail">
+  </div>
+  <div class="form-group">
+      <label>Clave</label>
+      <input type="text" class="form-control" formControlName="clave">
+  </div>
+  <div class="form-group">
+ 
+    <label>Tipo:</label>
+    <label class="radio-inline">
+      <input type="radio" name="tipo" formControlName="tipo" value="cliente">Cliente
+    </label>
   
-  <script>
-  // Get the modal
-  var modal = document.getElementById('id01');
-  
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-      if (event.target == modal) {
-          modal.style.display = "none";
-      }
-  }
-  </script>
-  
-  </body>
+
+  </div>
+
+
+      
+      <re-captcha  formControlName="captcha"></re-captcha>
+    
+
+  <p [ngStyle]="{'color': 'red'}" *ngIf="!form.valid">{{mensajeErrorFormAlta}}</p>
+  <button type="button" class="btn btn-default" (click)="guardar()">Guardar</button>
+  <p [ngStyle]="{'color': 'grenn'}" *ngIf="seguardo">{{mensajeOKFormAlta}}</p>
+</form>
+    </div>

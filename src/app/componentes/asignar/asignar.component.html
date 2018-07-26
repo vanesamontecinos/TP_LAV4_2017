@@ -1,0 +1,121 @@
+<table class="table table-condensed" *ngIf="mostrarListado">
+    <thead>
+      <tr>
+        <th>Cliente</th>
+        <th>Origen</th>
+        <th>Destino</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+       
+        <th>Comodidad</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+       
+      </tr>
+    </thead>
+    <tbody *ngFor="let algo of listado">
+      <tr *ngIf='algo.remisero=="SIN ASIGNAR" && algo.estado=="SOLICITADO"' >
+          <td>{{algo.cliente}} </td>
+        <td>{{algo.origen}} </td>
+        <td>{{algo.destino}} </td> 
+        <td >{{algo.fecha}} </td>  
+        <td>{{algo.hora}} </td>
+       
+        <td>{{algo.tipo}} </td> 
+        <td >{{algo.estado}} </td>  
+        <td>
+          <!--app-mascota [mascota]="mascota.id"></app-mascota-->
+          <button type="button" class="btn btn-info" (click)="Asignar(algo)">Asignar</button>
+         
+         </td>      
+        
+      </tr>
+     
+    </tbody>
+  </table>
+<div *ngIf="mostrarRemiseros">
+  <h1>Seleccione un Remisero de la lista</h1>
+<table class="table table-condensed" >
+    <thead>
+      <tr>
+          <th>Cliente</th>
+        <th>email</th>
+        <th>clave</th>
+        <th>perfil</th>
+        
+        
+      </tr>
+    </thead>
+    <tbody *ngFor="let algo of Remiseros">
+      <tr >
+          <td>{{algo.nombre}} </td>
+        <td>{{algo.mail}} </td>
+        <td>{{algo.clave}} </td> 
+        <td >{{algo.perfil}} </td>  
+         
+        <td>
+          <!--app-mascota [mascota]="mascota.id"></app-mascota-->
+          <button type="button" class="btn btn-info" (click)="SeleccionarRemisero(algo.nombre)">Seleccionar</button>
+        </td>  
+      </tr>
+     
+    </tbody>
+  </table>
+  <!--select *ngFor="let algo of Remiseros">
+      <option value="algo.nombre">{{algo.nombre}}</option>
+      <option value=algo.perfil>Saab</option>
+     
+    </select-->
+  </div>
+
+  <div *ngIf="mostrarVehiculos">
+      <h1>Seleccione un Vehiculo de la lista</h1>
+    <table class="table table-condensed" >
+        <thead>
+          <tr>
+              <th>Modelo</th>
+            <th>anio</th>
+            <th>color</th>
+            <th>comodidades</th>
+            
+            
+          </tr>
+        </thead>
+        <tbody *ngFor="let algo of vehiculos">
+          <tr >
+              <td>{{algo.modelo}} </td>
+            <td>{{algo.anio}} </td>
+            <td>{{algo.color}} </td> 
+            <td >{{algo.comodidades}} </td>  
+             
+            <td>
+              <!--app-mascota [mascota]="mascota.id"></app-mascota-->
+              <button type="button" class="btn btn-info" (click)="SeleccionarVehiculo(algo)">Seleccionar</button>
+            
+            </td>  
+          </tr>
+         
+        </tbody>
+      </table>
+    
+      </div>
+    <div *ngIf="mostrarMensaje">
+ <h1>CONFIRMAR CAMBIOS</h1>
+
+ ORIGEN: {{this.unViaje.origen}}
+ <br>
+ DESTINO: {{this.unViaje.destino}}
+ <br>
+ FECHA: {{this.unViaje.fecha}}
+ <br>
+ HORA: {{this.unViaje.hora}}
+ <br>
+ REMISERO ASIGNADO: {{this.unViaje.remisero}}
+ <br>
+ VEHICULO ASIGNADO: {{this.unViaje.vehiculo}}
+ <br>
+        <button type="button" class="btn btn-info" (click)="guardar()">GUARDAR</button>
+        <button type="button" class="btn btn-info" (click)="cancelar()">CANCELAR</button>
+        
+
+    </div>

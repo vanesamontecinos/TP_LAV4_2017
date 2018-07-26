@@ -1,0 +1,52 @@
+<!--div *ngIf="!this.mostrarAlta">
+
+  <label class="blanco"><b>Usuario</b></label>
+  <input type="text" placeholder="Usuario"  [(ngModel)]="unUsuario.nombre"  name="nombre" required>
+
+  <label  class="blanco"><b>Clave</b></label>
+  <input type="password" placeholder="Clave"  [(ngModel)]="unUsuario.clave" name="clave" required>
+      
+ 
+ 
+  <p [ngStyle]="{'color': 'red'}" *ngIf="!form.valid">{{mensajeErrorFormAlta}}</p>
+  <button  (click)="Ingresar()" >Ingresar</button>
+  
+  <p [ngStyle]="{'color': 'grenn'}" *ngIf="seguardo">{{mensajeOKFormAlta}}</p>
+
+</div-->
+
+<div *ngIf="this.mostrarAlta">
+<form [formGroup]="form" >
+  <div class="form-group">
+    <label>Nro de Ficha:</label>
+    <input type="text" class="form-control" formControlName="nroficha">
+  </div>
+  <div class="form-group">
+      <label>Raza:</label>
+      <input type="text" class="form-control" formControlName="raza">
+  </div>
+  <div class="form-group">
+    <label>Color:</label>
+    <input type="text" class="form-control" formControlName="color">
+</div>
+<div class="form-group">
+  <label>Edad:</label>
+  <input type="text" class="form-control" formControlName="edad">
+</div>
+
+  <div class="form-group">
+    <label>Tipo:</label>
+    <label class="radio-inline">
+      <input type="radio" name="tipo" formControlName="tipo" value="gato">Gato
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="tipo" formControlName="tipo" value="perro">Perro
+    </label>
+
+  </div>
+
+  <p [ngStyle]="{'color': 'red'}" *ngIf="!form.valid">{{mensajeErrorFormAlta}}</p>
+  <button type="button" class="btn btn-default" (click)="guardar()">Guardar</button>
+  <p [ngStyle]="{'color': 'grenn'}" *ngIf="seguardo">{{mensajeOKFormAlta}}</p>
+</form>
+</div>

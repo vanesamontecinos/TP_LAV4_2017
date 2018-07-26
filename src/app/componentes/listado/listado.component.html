@@ -1,15 +1,107 @@
+<table class="table table-condensed" *ngIf="!mostrarForm && !mostrarEncuesta && !mostrarRuta">
+    <thead>
+      <tr>
+          <th>Cliente</th>
+        <th>Origen</th>
+        <th>Destino</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+       
+        <th>Comodidad</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+        <th>Mapa</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let algo of listado">
+      <tr *ngIf='algo.cliente==this.nombreUsuario' >
+          <td>{{algo.cliente}} </td>
+        <td>{{algo.origen}} </td>
+        <td>{{algo.destino}} </td> 
+        <td >{{algo.fecha}} </td>  
+        <td>{{algo.hora}} </td>
+       
+        <td>{{algo.tipo}} </td> 
+        <td >{{algo.estado}} </td>  
+        <td>
+          <!--app-mascota [mascota]="mascota.id"></app-mascota-->
+          <button *ngIf="algo.estado=='SOLICITADO'" type="button" class="btn btn-info" (click)="Modificar(algo)">Modificar</button>
+          <button *ngIf="algo.estado=='SOLICITADO'" type="button" class="btn btn-info" (click)="Cancelar(algo)">Cancelar</button>
+          <button *ngIf="algo.estado=='REALIZADO' && algo.encuesta=='NO'" type="button" class="btn btn-info" (click)="CargarEncuesta(algo)">Cargar Encuesta</button>
+          
+        </td>      
+         <td>
+          <!--app-mascota [mascota]="mascota.id"></app-mascota-->
+         <button type="button" class="btn btn-info" (click)="VerRuta(algo)">Ver Ruta</button>
+         </td>  
+      </tr>
+     
+    </tbody>
+  </table>
 
-<!--input type="button" (click)="llamaService()" class="btn btn-info" value="Pulsame" > 
-<input type="button" (click)="llamaServicePromesa()" class="btn btn-info" value="Pulsame Promesa" --> 
-
-<!-- Centered Pills -->
-<ul class="nav nav-pills nav-justified">
-    <li class="active"><a routerLink="/Principal">Sala de Juegos</a></li>
-    <li class="active"><a routerLink="/ListadoJugador">Listado</a></li>
-    <li><a (click)="llamaService()">Servicio</a></li>
-    <li><a (click)="llamaServicePromesa()">Serv Promesa</a></li>
-    <li><a (click)="llamaServicePromesa()">Serv observable</a></li>
-  </ul>
+  <form [formGroup]="form" *ngIf="mostrarForm">
+    <div class="form-group">
+      <label>Origen:</label>
   
-<app-listado-de-resultados [listado]="listadoParaCompartir"> </app-listado-de-resultados>
+      <input placeholder="Ingresar direccion de origen" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" [(ngModel)]="unViaje.origen" class="form-control" #pickupInput formControlName="origen" readonly>
+    </div>
+    <div class="form-group">
+        <label>Destino:</label>
+        <input placeholder="Ingresar direccion de destino" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" [(ngModel)]="unViaje.destino" class="form-control" #pickupOutput formControlName="destino" readonly>
+       
+          
+    </div>
+  
+    <div class="form-group">
+        <label for="fecha">Fecha</label>
+        <input type="date" formControlName="fecha" [(ngModel)]="unViaje.fecha"  >
+      </div>
+  
+      <div class="form-group">
+          <label for="hora">Hora</label>
+          <input type="text" formControlName="hora"  [(ngModel)]="unViaje.hora" >
+  
+            
+          </div>
+    <div class="form-group">
+      <label>Medio de pago:</label>
+      <label class="radio-inline">
+        <input type="radio" name="pago" formControlName="pago" value="efectivo" [(ngModel)]="unViaje.pago">efectivo
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="pago" formControlName="pago" value="tarjeta" [(ngModel)]="unViaje.pago">Tarjeta
+      </label>
+    </div>
+  
+    <div class="form-group">
+        <label>Comodidad:</label>
+        <label class="radio-inline">
+          <input type="radio" name="tipo" formControlName="tipo"  [(ngModel)]="unViaje.tipo" value="normal">Normal
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="tipo" formControlName="tipo" [(ngModel)]="unViaje.tipo" value="grande">Grande
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="tipo" formControlName="tipo" [(ngModel)]="unViaje.tipo" value="vip">Vip
+          </label>
+      </div>
+  
+  
+    <p [ngStyle]="{'color': 'red'}" *ngIf="!form.valid">{{mensajeErrorFormAlta}}</p>
+    <button type="button" class="btn btn-default" (click)="guardar()">Guardar</button>
+    <p [ngStyle]="{'color': 'grenn'}" *ngIf="seguardo">{{mensajeOKFormAlta}}</p>
+  </form>
 
+  <div *ngIf="mostrarRuta">
+    <h4> Origen:{{this.direccionDesde}} </h4>
+    <h4> Destino:{{this.direccionHasta}} </h4>
+    <button type="button" class="btn btn-default" (click)="volver()">Volver</button>
+  <agm-map [latitude]="lat" [longitude]="lng">
+    <agm-direction [origin]="origin" [destination]="destination" >
+    </agm-direction>
+  </agm-map>
+
+</div>
+<div >
+<app-cargar-encuesta [algo]="seleccion" *ngIf='mostrarEncuesta'></app-cargar-encuesta>
+</div>

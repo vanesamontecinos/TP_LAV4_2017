@@ -1,0 +1,33 @@
+
+<div>
+    <button type="button" class="btn btn-info" (click)="listarServicios()">Mostrar Todos</button>
+    <button type="button" class="btn btn-info" (click)="MostrarSolicitados()">Mostrar Solicitados</button>
+    <button type="button" class="btn btn-info" (click)="MostrarRealizados()">Mostrar Realizados</button>
+    <button type="button" class="btn btn-info" (click)="MostrarCancelados()">Mostrar Cancelados</button>
+    
+<button type="button" (click)="export2Csv()" class="btn btn-warning">DESCARGAR</button>
+</div>
+<ng2-smart-table [settings]="settings" [source]="source"></ng2-smart-table>
+<!--table class="table " >
+    <thead>
+      
+      <th>usuario</th>
+      <th>email</th>
+      <th>fecha</th>
+      <th>sexo</th>
+      <th>juego</th>
+      <th>puntaje</th>
+      <th>gano?</th>
+    </thead>
+    <tbody *ngFor="let us of servicios">
+      
+      <td>{{us.usuario}}</td>
+      <td>{{us.raza}}</td>
+      <td>{{us.color}}</td>      
+      <td>{{us.edad | edad}}</td>
+      <td>{{us.tipo}}</td>
+      <td>{{us.estado}}</td>
+      <td>{{us.fecha}}</td>
+      
+    </tbody>
+  </table-->

@@ -1,0 +1,199 @@
+
+<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+<h1>{{algo}}</h1>
+<form [formGroup]="form" *ngIf='mostrarForm' >
+    <div class="form-group">
+    <label>¿Como fue el trato del remisero?</label>
+    <label class="radio-inline">
+      <input type="radio" name="trato" formControlName="trato" value="MB">Muy Bueno
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="trato" formControlName="trato" value="B">Bueno
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="trato" formControlName="trato" value="N">Normal
+    </label>
+    <label class="radio-inline">
+        <input type="radio" name="trato" formControlName="trato" value="R">Regular
+      </label>
+      <label class="radio-inline">
+          <input type="radio" name="trato" formControlName="trato" value="M">Mala
+        </label>
+      </div>
+      <div class="form-group">
+        <label>¿Se cumplio el horario especificado?</label>
+        <label class="radio-inline">
+          <input type="radio" name="horarioCumplido" formControlName="horarioCumplido" value="SI">SI
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="horarioCumplido" formControlName="horarioCumplido" value="NO">NO
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="horarioCumplido" formControlName="horarioCumplido" value="CERCA">Cerca
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label>¿El vehiculo fue acorde a lo solicitado?</label>
+        <label class="radio-inline">
+          <input type="radio" name="vehiculoCumplido" formControlName="vehiculoCumplido" value="SI">SI
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="vehiculoCumplido" formControlName="vehiculoCumplido" value="NO">NO
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="vehiculoCumplido" formControlName="vehiculoCumplido" value="CERCA">Cerca
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label>¿El viaje le parecio acorde al precio?</label>
+        <label class="radio-inline">
+          <input type="radio" name="precioAcorde" formControlName="precioAcorde" value="SI">SI
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="precioAcorde" formControlName="precioAcorde" value="BARATO">No, barato
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="precioAcorde" formControlName="precioAcorde" value="CARO">No, excesivo
+        </label>
+      </div>
+       
+      <div class="form-group">
+        <label>¿Como calificaria nuestra plataforma?</label>
+        <label class="radio-inline">
+          <input type="radio" name="plataforma" formControlName="plataforma" value="MB">Muy Bueno
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="plataforma" formControlName="plataforma" value="B">Bueno
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="plataforma" formControlName="plataforma" value="N">Normal
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="plataforma" formControlName="plataforma" value="R">Regular
+          </label>
+          <label class="radio-inline">
+              <input type="radio" name="plataforma" formControlName="plataforma" value="M">Mala
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label>¿Nos recomendaria?</label>
+            <label class="radio-inline">
+                <input type="radio" name="recomendable" formControlName="recomendable" value="SI">SI
+              </label>
+              <label class="radio-inline">
+                  <input type="radio" name="recomendable" formControlName="recomendable" value="NO">NO
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="recomendable" formControlName="recomendable" value="TALVEZ">TALVEZ
+                  </label>
+            </div>
+
+            <div class="form-group">
+                <label>¿Como conocio nuestros servicios?</label>
+                
+           
+                    <label class="radio-inline">
+                        <input type="checkbox" name="medios" formControlName="medios" value="MB">Muy Bueno
+                      </label>
+                      <label class="radio-inline">
+                        <input type="checkbox" name="medios" formControlName="medios" value="B">Bueno
+                      </label>
+                      <label class="radio-inline">
+                        <input type="checkbox" name="medios" formControlName="medios" value="N">Normal
+                      </label>
+                      <label class="radio-inline">
+                          <input type="checkbox" name="medios" formControlName="medios" value="R">Regular
+                        </label>
+                       
+                </div>
+
+                <!--label class="uploader" ondragover="return false;" [class.loaded]="loaded" [style.outlineColor]="dragging ? activeColor :
+                baseColor" (dragenter)="handleDragEnter()" (dragleave)="handleDragLeave()" (drop)="handleDrop($event)">
+                <i class="icon icon-upload" [style.color]="dragging 
+                   ? ((imageSrc.length > 0) ? overlayColor : activeColor)
+                   : ((imageSrc.length > 0) ? overlayColor : baseColor)"></i>
+                <img [src]="imageSrc3" width="100" height="100" (load)="handleImageLoad()" [class.loaded]="imageLoaded" />
+                <input  type="file" id="file3"  accept="image/*" (change)="handleInputChange($event)">
+                </label>
+                <label class="uploader" ondragover="return false;" [class.loaded]="loaded" [style.outlineColor]="dragging ? activeColor :
+                baseColor" (dragenter)="handleDragEnter()" (dragleave)="handleDragLeave()" (drop)="handleDrop($event)">
+                <i class="icon icon-upload" [style.color]="dragging 
+                   ? ((imageSrc.length > 0) ? overlayColor : activeColor)
+                   : ((imageSrc.length > 0) ? overlayColor : baseColor)"></i>
+                <img [src]="imageSrc2" width="100" height="100" (load)="handleImageLoad()" [class.loaded]="imageLoaded" />
+                <input  type="file" id="file2"  accept="image/*" (change)="handleInputChange($event)">
+                </label>
+                <label class="uploader" ondragover="return false;" [class.loaded]="loaded" [style.outlineColor]="dragging ? activeColor :
+                baseColor" (dragenter)="handleDragEnter()" (dragleave)="handleDragLeave()" (drop)="handleDrop($event)">
+                <i class="icon icon-upload" [style.color]="dragging 
+                   ? ((imageSrc.length > 0) ? overlayColor : activeColor)
+                   : ((imageSrc.length > 0) ? overlayColor : baseColor)"></i>
+                <img width="100" height="100" [src]="imageSrc" (load)="handleImageLoad()" [class.loaded]="imageLoaded" />
+                <input  type="file" id="file1"  accept="image/*" (change)="handleInputChange($event)">
+                </label-->
+
+
+                <div class="form-group">
+                  <label for="imagen1">FOTO 1</label>
+                  <input type="file" id="imagen1" (change)="onFileChange1($event)" #fileInput>
+                   </div>
+
+                <div class="form-group">
+                  <label for="imagen2">FOTO 2</label>
+                  <input type="file" id="imagen2" (change)="onFileChange2($event)" #fileInput>
+                 </div>
+
+                <div class="form-group">
+                  <label for="imagen3">FOTO 3</label>
+                  <input type="file" id="imagen3" (change)="onFileChange3($event)" #fileInput>
+                    </div>
+
+            <!--div class="form-group">
+              <label>¿Como conocio nuestros servicios?</label>
+              <select>
+                  <option formControlName="medios" value="Internet">Internet</option>
+                  <option formControlName="medios" value="Facebook">Facebook</option>
+                  <option formControlName="medios" value="Folletos">Folletos</option>
+                  <option formControlName="medios" value="Conocidos">Conocidos</option>
+                  <option formControlName="medios" value="Ninguno">Ninguno de los anteriores</option>
+                  
+                </select>
+              </div-->
+
+    <div class="form-group">
+      <label>Por favor dejar algun comentario o sugerencia:</label>
+      <input type="text" class="form-control" formControlName="comentarios" >
+    </div>
+   
+  
+    <p [ngStyle]="{'color': 'red'}" *ngIf="!form.valid">{{mensajeErrorFormAlta}}</p>
+    <button  (click)="guardar()" >Ingresar</button>
+    <p [ngStyle]="{'color': 'grenn'}" *ngIf="seguardo">{{mensajeOKFormAlta}}</p>
+   
+
+   
+  </form>
+  <!--label><b>Fotos tomadas durante el viaje: &nbsp;&nbsp;</b></label>
+  <file-drop [disableIf]="files.length >= 3" headertext="Coloque aqui su foto (Maximo 3)" (onFileDrop)="dropped($event)"></file-drop><br><br>
+
+  <div class="upload-table">
+      <table class="table">
+          <thead>
+              <tr>
+                  <th>Fotos</th>
+              </tr>
+          </thead>
+          <tbody class="upload-name-style">
+              <tr *ngFor="let item of files; let i=index">
+                  <td><strong>{{ item.relativePath }}</strong></td>
+              </tr>
+          </tbody>
+      </table>
+    </div-->
+    <div *ngIf='!mostrarForm'>
+      <h2>Encuesta Ingresada Correctamente</h2>
+      <h3>Gracias por tu tiempo.</h3>
+    </div>
